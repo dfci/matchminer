@@ -25,6 +25,6 @@ Documentation for the project can be found here - (Documentation)[https://app.gi
 
 
 # links
-* (matchminer-engine)[https://github.com/dfci/matchengine-V2]
-* (matchminer-api)[https://github.com/dfci/matchminer-api]
-* (matchminer-ui)[https://github.com/dfci/matchminer-ui]
+* [matchminer-engine-v2](https://github.com/dfci/matchengine-V2)
+* [matchminer-api](https://github.com/dfci/matchminer-api)
+* [matchminer-ui](https://github.com/dfci/matchminer-ui)
