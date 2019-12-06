@@ -21,7 +21,7 @@ The MatchMiner platform matches patient-specific genomic events to clinical tria
 />
 
 # documentation
-Documentation for the project can be found here - (Documentation)[https://app.gitbook.com/@matchminer/s/matchminer/]
+Documentation for the project can be found here - [Documentation](https://app.gitbook.com/@matchminer/s/matchminer/)
 
 
 # links
