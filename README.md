@@ -21,10 +21,10 @@ The MatchMiner platform matches patient-specific genomic events to clinical tria
 />
 
 # documentation
-Documentation for the project can be found here - [Documentation](https://app.gitbook.com/@matchminer/s/matchminer/)
+Documentation for the project can be found here - [Documentation](https://matchminer.gitbook.io/matchminer/)
 
 
 # links
-* [matchminer-engine-v2](https://github.com/dfci/matchengine-V2)
-* [matchminer-api](https://github.com/dfci/matchminer-api)
-* [matchminer-ui](https://github.com/dfci/matchminer-ui)
+* [matchminer-engine-v2](https://matchminer.gitbook.io/matchminer/matchengine-v2/introduction)
+* [matchminer-api](https://matchminer.gitbook.io/matchminer/matchminer-api/api)
+* [matchminer-ui](https://matchminer.gitbook.io/matchminer/matchminer-ui/)
