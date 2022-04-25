@@ -1,4 +1,4 @@
-# matchminer
+# MatchMiner
 <img src="mman.png"
      alt="MatchMiner man"
      height="100px"
@@ -20,11 +20,9 @@ The MatchMiner platform matches patient-specific genomic events to clinical tria
      align="center"
 />
 
-# documentation
+# Documentation
 Documentation for the project can be found here - [Documentation](https://matchminer.gitbook.io/matchminer/)
 
 
-# links
-* [matchminer-engine-v2](https://github.com/dfci/matchengine-V2)
-* [matchminer-api](https://github.com/dfci/matchminer-api)
-* [matchminer-ui](https://github.com/dfci/matchminer-ui)
+# Code 
+[matchminer-engine-v2](https://github.com/dfci/matchengine-V2) - the core part matching cancer patients to genomically driven clinical trials using Clinical Trial Markup Language (CTML) and patient clinical and genomic data. It utilizes the [matchminer-api](https://github.com/dfci/matchminer-api)  to store source data and matching results and [matchminer-ui](https://github.com/dfci/matchminer-ui) for displaying trial matches and other patient information.
