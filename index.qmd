@@ -95,27 +95,13 @@ Oncology trials are complex, with multiple arms and narrowly defined eligibility
 ::: {.pillars}
 
 ::: {.pillar}
-[Trial operations]{.pillar-kind}
-
-### MatchMiner Dashboard
-
-[Trial teams track open trials, slots, and accrual across several systems and a lot of email.]{.pillar-problem}
-
-One view of a disease center's trial portfolio: open and upcoming trials, slot availability, accrual, and study milestones. Trial details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes, cohort status, and contacts.
-
-[In production at Dana-Farber across several disease centers.]{.pillar-status}
-
-[About Dashboard](dashboard.qmd)
-:::
-
-::: {.pillar}
 [Genomic matching]{.pillar-kind}
 
 ### MatchMiner Genomics
 
-[Patients with the specific alterations a trial needs are hard to find by hand.]{.pillar-problem}
+[Patients with the specific genomic alterations a trial needs are hard to find by hand.]{.pillar-problem}
 
-Trial eligibility is written in a structured format, CTML, and a rules engine checks every patient's sequencing results against it. It finds trials for a patient and patients for a trial.
+Each trial's eligibility is written in a structured format, CTML, and a rules engine checks every patient's sequencing results against it. It finds trials for a patient and patients for a trial.
 
 [In clinical use at Dana-Farber since 2016.]{.pillar-status}
 
@@ -127,13 +113,27 @@ Trial eligibility is written in a structured format, CTML, and a rules engine ch
 
 ### MatchMiner-AI
 
-[Details that decide eligibility, like prior treatment and performance status, are often only in clinical notes.]{.pillar-problem}
+[Details that decide eligibility, like prior treatment, are often found only in clinical notes.]{.pillar-problem}
 
 Language models read a patient's clinical notes and match them against all open trials, not only genomically driven ones. Oncologists review the suggested trials, each with a plain-language summary.
 
 [Launched for Dana-Farber providers in February 2026.]{.pillar-status}
 
 [About MatchMiner-AI](matchminer-ai.qmd)
+:::
+
+::: {.pillar}
+[Trial operations]{.pillar-kind}
+
+### MatchMiner Dashboard
+
+[Trial teams track open trials, slots, and accrual across several systems and a lot of email.]{.pillar-problem}
+
+One view of a disease center's trials: open slots, accrual, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
+
+[In production at Dana-Farber across several disease centers.]{.pillar-status}
+
+[About Dashboard](dashboard.qmd)
 :::
 
 :::

@@ -397,16 +397,21 @@ figure.match-demo {
   font-size: 0.9rem;
 }
 
+/* Each pillar is a subgrid spanning six shared rows (kind, title, problem,
+   body, status, link), so those parts line up across the three columns. */
 .pillars {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-rows: repeat(6, auto);
+  column-gap: 2rem;
+  row-gap: 0;
   margin-top: 3rem;
 }
 
 .pillar {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-row: span 6;
+  grid-template-rows: subgrid;
   border-top: 3px solid var(--mm-deep);
   padding-top: 1.25rem;
 }
@@ -414,9 +419,10 @@ figure.match-demo {
 .pillar h3 { margin: 0.2rem 0 0.8rem; font-size: 1.45rem; }
 .pillar-kind { color: var(--mm-blue); font-weight: 600; font-size: 0.95rem; }
 .pillar-status { color: var(--mm-gray); font-size: 0.92rem; }
-/* Pandoc wraps the h3 and what follows it in a <section> */
-.pillar > section { flex: 1; display: flex; flex-direction: column; }
-.pillar section > p:last-child { margin-top: auto; margin-bottom: 0; }
+/* Pandoc wraps the h3 and what follows it in a <section>; flatten it so its
+   children join the subgrid. */
+.pillar > section { display: contents; }
+.pillar section > p:last-child { margin-bottom: 0; }
 .pillar section > p:last-child a { font-weight: 600; }
 
 /* ---------- Open source band ---------- */
@@ -624,6 +630,8 @@ figure.match-demo {
 @media (max-width: 991px) {
   .hero-grid, .open-grid, .evidence-grid, .adopt-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
   .pillars, .suite-intro { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .pillars { grid-template-rows: none; }
+  .pillar { display: block; grid-row: auto; }
   .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
   .footer-org { grid-column: 1 / -1; }
   .steps { grid-template-columns: 1fr 1fr; row-gap: 3rem; }
