@@ -24,12 +24,12 @@ website:
     left:
       - text: "Tools"
         menu:
-          - text: "Dashboard"
-            href: dashboard.qmd
           - text: "Genomics"
             href: genomics.qmd
           - text: "MatchMiner-AI"
             href: matchminer-ai.qmd
+          - text: "Dashboard"
+            href: dashboard.qmd
       - text: "Get started"
         href: get-started.qmd
       - text: "Open source"

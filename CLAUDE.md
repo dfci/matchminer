@@ -81,4 +81,4 @@ The user has a read-only markdown vault with more MatchMiner detail (roles, Matc
 
 The repository is public. Keep internal material (partner names, unannounced collaborations, internal paths, staff sign-off notes) out of every tracked file, including comments; put it in `PLANNING.md` or `CLAUDE.local.md` instead.
 
-Work on the `site` branch; pushing it deploys the live site. Claude can run `git` and `gh` here. Commit when the user asks, and confirm before every push, since it publishes. Never push `main`: its local history contains `PLANNING.md`. Before committing, check that `git status` doesn't list `PLANNING.md` or `CLAUDE.local.md`.
+Work on the `site` branch; pushing it deploys the live site. Claude can run `git` and `gh` here. Commit when the user asks, and confirm before every push, since it publishes. `site` is the only branch; there is no `main`. Before committing, check that `git status` doesn't list `PLANNING.md` or `CLAUDE.local.md`.

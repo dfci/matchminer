@@ -91,8 +91,11 @@ figure.suite-demo {
   animation-delay: calc(0.2s + var(--i) * 0.25s);
 }
 .sd-card p { margin: 0; }
-.sd-genomics { align-self: center; }
-.sd-ai { grid-column: 1 / -1; margin-left: 12%; }
+/* Reading order Genomics, MatchMiner-AI, Dashboard: Genomics top left,
+   MatchMiner-AI on the right across both rows, Dashboard below Genomics. */
+.sd-genomics { grid-column: 1; grid-row: 1; }
+.sd-ai { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
+.sd-dash { grid-column: 1; grid-row: 2; }
 
 @keyframes card-in {
   from { opacity: 0; transform: translateY(8px); }
@@ -642,8 +645,7 @@ figure.match-demo {
   #quarto-content > .band { padding: 3.5rem 0; }
   .modes, .steps, .impact-list, .footer-grid { grid-template-columns: 1fr; }
   figure.suite-demo { grid-template-columns: minmax(0, 1fr); }
-  .sd-genomics { align-self: start; }
-  .sd-ai { margin: 0; }
+  .sd-genomics, .sd-ai, .sd-dash { grid-column: auto; grid-row: auto; }
   .demo-panel { padding: 1.25rem 1rem 1rem; }
   #listing-latest-news .quarto-post { grid-template-columns: minmax(0, 1fr); }
   #listing-latest-news .body, #listing-latest-news .metadata { grid-column: 1; grid-row: auto; }

@@ -31,7 +31,20 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
 
 ```{=html}
 <figure class="suite-demo" aria-labelledby="suite-demo-caption">
-  <div class="sd-card sd-dash" style="--i:0">
+  <div class="sd-card sd-genomics" style="--i:0">
+    <p class="sd-tool">Genomics</p>
+    <p class="sd-line"><span class="chip chip-hit">EGFR p.L858R</span> Lung adenocarcinoma</p>
+    <p class="sd-result"><span class="dot" aria-hidden="true"></span>Matches 24-117, arm A</p>
+  </div>
+  <div class="sd-card sd-ai" style="--i:1">
+    <p class="sd-tool">MatchMiner-AI</p>
+    <p class="sd-summary"><span class="sd-label">Summary from notes</span> Metastatic lung adenocarcinoma, EGFR L858R. Progressed on osimertinib. ECOG 1, adequate organ function.</p>
+    <ol class="sd-ranked">
+      <li><span class="dot" aria-hidden="true"></span><span><b>25-032</b> EGFR-mutant NSCLC after osimertinib</span></li>
+      <li><span class="dot dot-muted" aria-hidden="true"></span><span><b>24-117</b> EGFR L858R NSCLC</span></li>
+    </ol>
+  </div>
+  <div class="sd-card sd-dash" style="--i:2">
     <p class="sd-tool">Dashboard</p>
     <table class="sd-trials" data-quarto-disable-processing="true">
       <thead><tr><th scope="col">Trial</th><th scope="col">Status</th><th scope="col">Open slots</th></tr></thead>
@@ -42,20 +55,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
       </tbody>
     </table>
   </div>
-  <div class="sd-card sd-genomics" style="--i:1">
-    <p class="sd-tool">Genomics</p>
-    <p class="sd-line"><span class="chip chip-hit">EGFR p.L858R</span> Lung adenocarcinoma</p>
-    <p class="sd-result"><span class="dot" aria-hidden="true"></span>Matches 24-117, arm A</p>
-  </div>
-  <div class="sd-card sd-ai" style="--i:2">
-    <p class="sd-tool">MatchMiner-AI</p>
-    <p class="sd-summary"><span class="sd-label">Summary from notes</span> Metastatic lung adenocarcinoma, EGFR L858R. Progressed on osimertinib. ECOG 1, adequate organ function.</p>
-    <ol class="sd-ranked">
-      <li><span class="dot" aria-hidden="true"></span><span><b>25-032</b> EGFR-mutant NSCLC after osimertinib</span></li>
-      <li><span class="dot dot-muted" aria-hidden="true"></span><span><b>24-117</b> EGFR L858R NSCLC</span></li>
-    </ol>
-  </div>
-  <figcaption id="suite-demo-caption">Synthetic example. Dashboard shows which trials have open slots, Genomics matches the tumor's EGFR variant, and MatchMiner-AI reads the notes and sees the patient has already had osimertinib.</figcaption>
+  <figcaption id="suite-demo-caption">Synthetic example. Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, and Dashboard shows which trials have open slots.</figcaption>
 </figure>
 ```
 

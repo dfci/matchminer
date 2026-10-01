@@ -5,20 +5,10 @@ subtitle: "MatchMiner Genomics and MatchMiner-AI are free to deploy. Here is wha
 
 Both tools run inside your institution's network, so patient data stays there. Pick the one that fits the problem you're solving, or run both.
 
-- **[MatchMiner-AI](#matchminer-ai)** matches patients to all open trials using their clinical notes.
 - **[MatchMiner Genomics](#genomics)** matches patients to precision medicine trials using their sequencing results.
+- **[MatchMiner-AI](#matchminer-ai)** matches patients to all open trials using their clinical notes.
 
 [MatchMiner Dashboard](dashboard.qmd) isn't available outside Dana-Farber yet. Its code is due for release in winter 2026–27.
-
-## MatchMiner-AI {#matchminer-ai}
-
-The inference pipeline is a Python package for Python 3.12 or later:
-
-```bash
-pip install matchminer-ai
-```
-
-The package is still before version 1 and under active development. Its [documentation](https://dfci.github.io/matchminer-ai-inference) covers requirements, GPU recommendations, installation, and a quickstart with an example notebook, and explains how to choose between local and remote model inference. The models and synthetic training data are on [Hugging Face](open-source.qmd#models-and-data), and the [training code](https://github.com/dfci/matchminer-ai-training) is public. The code is released for non-commercial use under CC BY-NC-ND 4.0.
 
 ## MatchMiner Genomics {#genomics}
 
@@ -71,10 +61,20 @@ Criteria can combine genomic, clinical, and demographic conditions with `and` / 
 
 If you'd rather not edit YAML by hand, Memorial Sloan Kettering built a [curation interface for MatchMiner](https://github.com/oncokb/matchminer-curate).
 
+## MatchMiner-AI {#matchminer-ai}
+
+The inference pipeline is a Python package for Python 3.12 or later:
+
+```bash
+pip install matchminer-ai
+```
+
+The package is still before version 1 and under active development. Its [documentation](https://dfci.github.io/matchminer-ai-inference) covers requirements, GPU recommendations, installation, and a quickstart with an example notebook, and explains how to choose between local and remote model inference. The models and synthetic training data are on [Hugging Face](open-source.qmd#models-and-data), and the [training code](https://github.com/dfci/matchminer-ai-training) is public. The code is released for non-commercial use under CC BY-NC-ND 4.0.
+
 ## Where to go next
 
-- [MatchMiner-AI documentation](https://dfci.github.io/matchminer-ai-inference)
 - [MatchMiner Genomics documentation and demo setup](https://matchminer.gitbook.io/matchminer/)
+- [MatchMiner-AI documentation](https://dfci.github.io/matchminer-ai-inference)
 - [All code, models, and data](open-source.qmd)
 - [Frequently asked questions](faq.qmd)
 - [Contact the team](contact.qmd) if you are planning a deployment
