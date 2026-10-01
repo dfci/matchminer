@@ -5,7 +5,7 @@ subtitle: "One view of a disease center's trial portfolio: open and upcoming tri
 
 Trial teams piece together which trials are open, how many slots remain, and how accrual is going from several systems and a lot of email. MatchMiner Dashboard puts that in one place.
 
-![The Dashboard at Dana-Farber, showing one trial group. Names, the program, and internal comments are blurred.](assets/img/screenshots/dashboard-trial-group.webp){.screenshot .column-body-outset fig-alt="MatchMiner Dashboard trials overview with one trial group expanded. The row shows the trial's eligibility criteria (resectable, stage IA2 to III, no prior lines, a list of biomarkers), cohort and biopsy status, and accrual fields for consented, enrolled, and active patients. A sidebar has filters for groups, slots available, study status, biomarkers, and prior lines. Names, the program name, and comments are blurred."}
+![The Dashboard at Dana-Farber, showing one trial group. Names, the program, the protocol number, accrual counts, and internal comments are blurred.](assets/img/screenshots/dashboard-trial-group.webp){.screenshot .column-body-outset fig-alt="MatchMiner Dashboard trials overview with one trial group expanded. The row shows the trial's eligibility criteria (resectable, stage IA2 to III, no prior lines, a list of biomarkers), cohort and biopsy status, and accrual fields for consented, enrolled, and active patients. A sidebar has filters for groups, slots available, study status, biomarkers, and prior lines. Names, the program name, the protocol number, the accrual counts, and comments are blurred."}
 
 ## What it does
 
