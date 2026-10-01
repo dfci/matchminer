@@ -1,0 +1,80 @@
+---
+title: "Run MatchMiner at your institution"
+subtitle: "MatchMiner Genomics and MatchMiner-AI are free to deploy. Here is what each one needs."
+---
+
+Both tools run inside your institution's network, so patient data stays there. Pick the one that fits the problem you're solving, or run both.
+
+- **[MatchMiner-AI](#matchminer-ai)** matches patients to all open trials using their clinical notes.
+- **[MatchMiner Genomics](#genomics)** matches patients to precision medicine trials using their sequencing results.
+
+[MatchMiner Dashboard](dashboard.qmd) isn't available outside Dana-Farber yet. Its code is due for release in winter 2026–27.
+
+## MatchMiner-AI {#matchminer-ai}
+
+The inference pipeline is a Python package for Python 3.12 or later:
+
+```bash
+pip install matchminer-ai
+```
+
+The package is still before version 1 and under active development. Its [documentation](https://dfci.github.io/matchminer-ai-inference) covers requirements, GPU recommendations, installation, and a quickstart with an example notebook, and explains how to choose between local and remote model inference. The models and synthetic training data are on [Hugging Face](open-source.qmd#models-and-data), and the [training code](https://github.com/dfci/matchminer-ai-training) is public. The code is released for non-commercial use under CC BY-NC-ND 4.0.
+
+## MatchMiner Genomics {#genomics}
+
+MatchMiner Genomics is HIPAA compliant when hosted behind your institutional firewall. The [documentation](https://matchminer.gitbook.io/matchminer/) walks through a demo setup you can run on a laptop, with example CTML and example patient data.
+
+### What you need
+
+::: {.req-table}
+| | Small instance | Dana-Farber's deployment |
+|---|---|---|
+| **Compute** | 4 CPUs, 4 GB memory (a laptop) | 45 CPU cores, 128 GB memory |
+| **Scale** | Demo data | ~60,000 clinical samples, ~400 trials, ~600 saved filters, ~500 users |
+:::
+
+#### Data
+
+The MatchEngine and web interface need two inputs:
+
+- **Structured patient data.** Genomic results and clinical attributes in the [patient data format](https://matchminer.gitbook.io/matchminer/deployment/patient-data).
+- **Trial eligibility in CTML.** Each trial's criteria written in [Clinical Trial Markup Language](https://matchminer.gitbook.io/matchminer/deployment/ctml-and-trial-curation).
+
+#### People
+
+We suggest at least two scientists to curate and review CTML documents, and at least one software engineer to build the [data ingestion](https://matchminer.gitbook.io/matchminer/deployment/importing-data) pipelines and connect MatchMiner to institutional systems such as single sign-on.
+
+### Writing trials in CTML
+
+CTML is plain YAML (or JSON), so you can write it in any text editor. Here is one arm of a trial that enrolls adults with EGFR L858R-mutant non-small cell lung cancer:
+
+```yaml
+protocol_no: 24-117
+nct_id: NCT00000000
+treatment_list:
+  step:
+    - arm:
+        - arm_code: A
+          arm_description: EGFR L858R, non-small cell lung cancer
+          match:
+            - and:
+                - genomic:
+                    hugo_symbol: EGFR
+                    protein_change: p.L858R
+                    variant_category: Mutation
+                - clinical:
+                    oncotree_primary_diagnosis: Non-Small Cell Lung Cancer
+                    age_numerical: ">=18"
+```
+
+Criteria can combine genomic, clinical, and demographic conditions with `and` / `or`, and CTML can be extended with new criteria. Prefix a value with `!` to exclude it: `variant_category: "!Mutation"` on a second genomic block, for example, keeps out patients who carry a specific variant. Diagnoses follow [OncoTree](https://oncotree.mskcc.org/), so a criterion for non-small cell lung cancer also matches patients with more specific diagnoses underneath it, such as lung adenocarcinoma.
+
+If you'd rather not edit YAML by hand, Memorial Sloan Kettering built a [curation interface for MatchMiner](https://github.com/oncokb/matchminer-curate).
+
+## Where to go next
+
+- [MatchMiner-AI documentation](https://dfci.github.io/matchminer-ai-inference)
+- [MatchMiner Genomics documentation and demo setup](https://matchminer.gitbook.io/matchminer/)
+- [All code, models, and data](open-source.qmd)
+- [Frequently asked questions](faq.qmd)
+- [Contact the team](contact.qmd) if you are planning a deployment

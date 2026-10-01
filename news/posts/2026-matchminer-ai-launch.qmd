@@ -1,0 +1,9 @@
+---
+title: "MatchMiner-AI goes live at Dana-Farber"
+description: "Providers can now look up AI-suggested clinical trials for their patients."
+date: 2026-02-01  # Month only; exact launch date not confirmed
+---
+
+Dana-Farber providers can now look up AI-suggested clinical trials for their patients, based on the full medical record.
+
+[MatchMiner-AI](../../matchminer-ai.qmd) reads a patient's clinical notes and matches them against all open trials, not only those with genomic criteria. Each suggestion comes with a plain-language summary for the oncologist to review.

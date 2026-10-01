@@ -1,0 +1,70 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "**/*.qmd"  # keeps PLANNING.md and other notes off the public site
+  post-render: scripts/relativize-links.ts
+  resources:
+    - CNAME
+    - setup.sh
+    - assets/img/**
+
+website:
+  title: "MatchMiner"
+  description: "Open-source software for clinical trial recruitment: trial operations, genomic matching, and AI matching across the medical record. Developed at Dana-Farber Cancer Institute."
+  site-url: https://matchminer.org
+  repo-url: https://github.com/dfci/matchminer
+  favicon: assets/img/matchminer-mark.svg
+  open-graph: true
+  page-navigation: false
+  back-to-top-navigation: false
+  bread-crumbs: false
+  navbar:
+    title: "MatchMiner"
+    left:
+      - text: "Tools"
+        menu:
+          - text: "Dashboard"
+            href: dashboard.qmd
+          - text: "Genomics"
+            href: genomics.qmd
+          - text: "MatchMiner-AI"
+            href: matchminer-ai.qmd
+      - text: "Get started"
+        href: get-started.qmd
+      - text: "Open source"
+        href: open-source.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "News"
+        href: news/index.qmd
+      - text: "Team"
+        href: team.qmd
+    right:
+      - text: "Docs"
+        menu:
+          - text: "MatchMiner Genomics"
+            href: https://matchminer.gitbook.io/matchminer/
+          - text: "MatchMiner-AI"
+            href: https://dfci.github.io/matchminer-ai-inference
+      - text: "Contact"
+        href: contact.qmd
+      - icon: github
+        href: https://github.com/dfci/matchminer
+        aria-label: "MatchMiner on GitHub"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+      - styles/theme.scss
+    css: styles/site.css
+    include-after-body: _includes/footer.html
+    toc: false
+    title-block-banner: true
+    anchor-sections: true
+    smooth-scroll: true
+    highlight-style: github
+    link-external-newwindow: true
+    link-external-icon: false

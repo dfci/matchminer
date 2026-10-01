@@ -1,0 +1,50 @@
+---
+title: "Open source"
+subtitle: "Code, model weights, and synthetic training data that any cancer center can run inside its own network."
+---
+
+MatchMiner is built in the open so other centers can use it, inspect how matches are made, and run it without sending patient data anywhere. The code, models, and data below are published by Dana-Farber.
+
+## Code {#code}
+
+All published MatchMiner code lives in the [`dfci`](https://github.com/dfci) GitHub organization.
+
+::: {.repo-table .column-body-outset}
+| Repository | What it is | License |
+|---|---|---|
+| [matchminer-ai-inference](https://github.com/dfci/matchminer-ai-inference) | MatchMiner-AI inference pipeline, published as the `matchminer-ai` Python package. [Documentation](https://dfci.github.io/matchminer-ai-inference). | CC BY-NC-ND 4.0 |
+| [matchminer-ai-training](https://github.com/dfci/matchminer-ai-training) | Code for training the MatchMiner-AI models | CC BY-NC-ND 4.0 |
+| [matchengine-V2](https://github.com/dfci/matchengine-V2) | MatchMiner Genomics matching engine | Apache-2.0 |
+| [matchminer-api](https://github.com/dfci/matchminer-api) | MatchMiner Genomics API, which stores patient data and match results | See repository |
+| [matchminer-ui](https://github.com/dfci/matchminer-ui) | MatchMiner Genomics web interface | AGPL-3.0 |
+:::
+
+<!-- TODO: matchminer-api declares no license on GitHub (checked 2026-09-24). Add one there, then update this row. -->
+
+The [matchminer](https://github.com/dfci/matchminer) repository is the starting point for a Genomics deployment. MatchMiner Dashboard's code will be released in winter 2026–27.
+
+## Models and data {#models-and-data}
+
+MatchMiner-AI's models and training data are on Hugging Face under [`ksg-dfci`](https://huggingface.co/ksg-dfci). The models are trained entirely on synthetic medical records, which is why they can be shared.
+
+**Model families**
+
+- **TrialSpace** for trial retrieval, for example [TrialSpace-0526](https://huggingface.co/ksg-dfci/TrialSpace-0526)
+- **TrialChecker** for eligibility, for example [TrialChecker-0526](https://huggingface.co/ksg-dfci/TrialChecker-0526)
+- **BoilerplateChecker** for exclusion factors, for example [BoilerplateChecker-0526](https://huggingface.co/ksg-dfci/BoilerplateChecker-0526)
+- **OncoReasoning**, for example [OncoReasoning-0426](https://huggingface.co/ksg-dfci/OncoReasoning-0426)
+
+The current releases are MatchMiner-AI 0426 and 0526. ONNX versions of the 0526 models are also available.
+
+**Synthetic training data**
+
+- [mmai-synthetic-0526](https://huggingface.co/datasets/ksg-dfci/mmai-synthetic-0526), about 15.5 million rows
+- Earlier releases: [mmai-synthetic-0426](https://huggingface.co/datasets/ksg-dfci/mmai-synthetic-0426) and [mmai-synthetic-1225](https://huggingface.co/datasets/ksg-dfci/mmai-synthetic-1225)
+
+## Who else uses it
+
+Princess Margaret Cancer Centre (University Health Network) is building a new version of the matching engine in collaboration with Dana-Farber through its CTIMS project. Memorial Sloan Kettering's OncoKB team has maintained MatchMiner forks and built a [curation interface for writing CTML](https://github.com/oncokb/matchminer-curate).
+
+## Contributing
+
+Bug reports and pull requests are welcome in each repository. For larger collaborations, [contact the team](contact.qmd).

@@ -1,0 +1,9 @@
+---
+title: "MatchMiner-AI preprint posted on arXiv"
+description: "An open-source approach to matching cancer patients to clinical trials using language models."
+date: 2024-12-23
+---
+
+[MatchMiner-AI: An Open-Source Solution for Cancer Clinical Trial Matching](https://arxiv.org/abs/2412.17228) is now available on arXiv.
+
+MatchMiner-AI extends MatchMiner beyond genomic matching. It uses language models to read the clinical record and compare patients against trial eligibility criteria as written.

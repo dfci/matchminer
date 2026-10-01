@@ -1,0 +1,13 @@
+---
+title: "News"
+subtitle: "Papers, grants, and project updates from the MatchMiner team."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, description]
+  date-format: "MMMM YYYY"
+---

@@ -1,0 +1,18 @@
+---
+title: "OPTIONS-ACTIVATE launches"
+description: "A randomized study testing whether proactive AI trial suggestions help more patients reach clinical trials."
+date: 2026-08-01  # Month only on purpose; the registry gives a July 20 study start, the launch was August
+---
+
+<!-- TODO: wording pending review before launch (see PLANNING.md). -->
+
+Dana-Farber has launched OPTIONS-ACTIVATE, a randomized study testing whether proactive AI trial suggestions help more patients reach clinical trials.
+
+When [MatchMiner-AI](../../matchminer-ai.qmd) detects that a patient's cancer is progressing, their oncologist receives an email with a ranked list of possible trials. The study compares this with standard MatchMiner-AI access. Its main measure is the share of new systemic treatments that are clinical trials.
+
+It builds on an [earlier Dana-Farber randomized trial](2025-jama-progression-notifications.qmd), which found that AI could reliably spot patients likely to need a change in treatment, but that notifications alone did not raise enrollment. OPTIONS-ACTIVATE is designed around that lesson.
+
+OPTIONS-ACTIVATE is part of ACTIVATE (AI-driven Clinical-trial Trial-Information and Viability Assessment Tool for EHRs), a research program led by Kenneth Kehl, MD, MPH, and funded by the National Cancer Institute (R37 CA295653).
+
+- [ClinicalTrials.gov NCT07232043](https://clinicaltrials.gov/study/NCT07232043)
+- [Dana-Farber trial listing 25-413](https://www.dana-farber.org/clinical-trials/25-413)

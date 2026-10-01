@@ -1,0 +1,8 @@
+/.quarto/
+/_site/
+.DS_Store
+**/*.quarto_ipynb
+.claude/settings.local.json
+.claude/.cc-writes/
+PLANNING.md
+CLAUDE.local.md

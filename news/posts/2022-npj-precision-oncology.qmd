@@ -1,0 +1,9 @@
+---
+title: "MatchMiner paper published in npj Precision Oncology"
+description: "Highlights from our paper describing MatchMiner's design and its adoption at Dana-Farber."
+date: 2022-08-01  # TODO: confirm date; link or port the original "behind the scenes" blog post
+---
+
+[MatchMiner: An open-source platform for cancer precision medicine](https://www.nature.com/articles/s41698-022-00312-5) describes how MatchMiner works and how clinicians and trial staff at Dana-Farber use it.
+
+By January 2022, Dana-Farber had about 170 open precision medicine trials in MatchMiner, 84% of patients had at least one trial match, and more than 220 patients had enrolled on a trial as a result of a MatchMiner match.

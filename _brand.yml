@@ -1,0 +1,72 @@
+# MatchMiner brand: an open-source project with DFCI-inspired styling.
+# Colors are the DFCI primary + secondary palettes from the Dana-Farber Brand
+# Standards. Orange is reserved for "match" highlights and large text only
+# (it fails WCAG contrast for body copy).
+
+meta:
+  name:
+    short: MatchMiner
+    full: MatchMiner, open-source clinical trial matching
+  link:
+    home: https://matchminer.org
+    github: https://github.com/dfci/matchminer
+
+logo:
+  images:
+    mark:
+      path: assets/img/matchminer-mark.svg
+      alt: ""  # decorative: the navbar title already says "MatchMiner"
+    dfci-white:
+      path: assets/img/brand/dfci-logo-stacked-white.png
+      alt: "Dana-Farber Cancer Institute"
+    dfci-color:
+      path: assets/img/brand/dfci-logo-stacked-color.png
+      alt: "Dana-Farber Cancer Institute"
+  small: mark
+  medium: mark
+
+color:
+  palette:
+    dfci-blue: "#00629B"
+    dfci-light-blue: "#41B6E6"
+    dfci-orange: "#FFA300"
+    dfci-gray: "#63666A"
+    dfci-deep-blue: "#003354"
+    dfci-deep-gray: "#4D4D4F"
+    ink: "#1c2b36"
+    mist: "#f2f6f9"
+    rule: "#d9e2e8"
+    # Bootstrap aliases
+    blue: dfci-blue
+    cyan: dfci-light-blue
+    orange: dfci-orange
+    gray: dfci-gray
+  primary: dfci-blue
+  secondary: dfci-gray
+  info: dfci-light-blue
+  warning: dfci-orange
+  dark: dfci-deep-blue
+  foreground: ink
+  background: "#ffffff"
+
+typography:
+  # Archivo stands in for Univers (the DFCI brand face). It's loaded in
+  # styles/theme.scss so we get its variable width axis, which the condensed
+  # headings use. Arial is DFCI's own web fallback.
+  fonts:
+    - family: Archivo
+      source: system
+    - family: JetBrains Mono
+      source: system
+  base:
+    family: Archivo
+    size: 17px
+    line-height: 1.6
+  headings:
+    family: Archivo
+    weight: 600
+    color: dfci-deep-blue
+    line-height: 1.15
+  monospace: JetBrains Mono
+  link:
+    color: primary

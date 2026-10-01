@@ -1,0 +1,11 @@
+---
+title: "JAMA Network Open publishes AI-triggered trial notification study"
+description: "A randomized trial of emailing oncologists about matching trials when AI detects cancer progression."
+date: 2025-04-21
+---
+
+Our study, [Clinical Trial Notifications Triggered by Artificial Intelligence–Detected Cancer Progression](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029), is out in JAMA Network Open.
+
+Patients often become eligible for a new trial when their cancer progresses. In this randomized trial at Dana-Farber, run from January 2023 to June 2024, AI applied to imaging reports detected likely progression, and the patient's oncologist received an email about genomically matched trials.
+
+The AI reliably spotted patients likely to need a new treatment, but the notifications did not increase trial enrollment. That result shaped the design of the follow-up study, [OPTIONS-ACTIVATE](2026-options-activate.qmd).

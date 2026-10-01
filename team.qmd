@@ -1,0 +1,70 @@
+---
+title: "Team"
+subtitle: "MatchMiner is built and maintained by the Knowledge Systems Group at Dana-Farber Cancer Institute."
+---
+
+MatchMiner started in 2016 as a collaboration between software engineers, data scientists, and clinicians at Dana-Farber. The same group runs it in production for Dana-Farber's clinicians and trial staff and maintains the open-source project.
+
+```{=html}
+<div class="team-grid">
+  <div class="person">
+    <div class="avatar" aria-hidden="true">EC<img src="assets/img/team/ethan-cerami.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Ethan Cerami</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">MH<img src="assets/img/team/michael-hassett.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Michael Hassett</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">JL<img src="assets/img/team/james-lindsay.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">James Lindsay</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">TM<img src="assets/img/team/tali-mazor.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Tali Mazor</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">HK<img src="assets/img/team/harry-klein.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Harry Klein</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">EM<img src="assets/img/team/emily-mallaber.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Emily Mallaber</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">JP<img src="assets/img/team/james-provencher.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">James Provencher</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">SN<img src="assets/img/team/stephen-van-nostrand.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Stephen Van Nostrand</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">GG<img src="assets/img/team/gufran-gungor.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Gufran Gungor</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">MD<img src="assets/img/team/michael-d-eletto.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Michael D&rsquo;Eletto</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">JH<img src="assets/img/team/jason-hansel.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Jason Hansel</p>
+  </div>
+</div>
+```
+
+## Funding {#funding}
+
+MatchMiner is supported by:
+
+- Dana-Farber Cancer Institute
+- the Fund for Innovation in Cancer Informatics (ICI)
+- the National Cancer Institute, through R37 CA295653 (ACTIVATE, PI Kenneth Kehl) and R00 CA245899, which funded the earlier notifications trial
+- Meta, through a Llama Impact Grant for MatchMiner-AI
+
+MatchMiner-AI took 2nd place for the 2026 Hearst Health Prize.
+
+## Join the team {#join}
+
+We are always looking for software engineers and data scientists who want to work on cancer informatics. [Get in touch](contact.qmd) to hear about open roles.

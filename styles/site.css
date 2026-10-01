@@ -1,0 +1,700 @@
+/* Layout and components. Colors mirror styles/theme.scss (DFCI palette). */
+
+:root {
+  --mm-deep: #003354;
+  --mm-blue: #00629B;
+  --mm-light: #41B6E6;
+  --mm-orange: #FFA300;
+  --mm-gray: #63666A;
+  --mm-ink: #1c2b36;
+  --mm-mist: #f2f6f9;
+  --mm-rule: #d9e2e8;
+  --mm-wrap: 1160px;
+}
+
+.wrap {
+  max-width: var(--mm-wrap);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Custom-layout pages: sections are full-bleed bands */
+/* #quarto-content > * zeroes padding, so match its specificity */
+#quarto-content > .band { padding: 5rem 0; }
+.band-mist { background: var(--mm-mist); }
+.band-deep { background: var(--mm-deep); color: #dce8f0; }
+.band-deep h2 { color: #fff; }
+.band-deep a { color: var(--mm-light); }
+
+.band h2 { margin-bottom: 1rem; border-bottom: 0; padding-bottom: 0; }
+.band .wrap > section > p { max-width: 42rem; }
+
+/* ---------- Hero ---------- */
+
+#quarto-content > .band-hero {
+  background: var(--mm-deep);
+  color: #cfe0ec;
+  padding: 5rem 0 5rem;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.3fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  color: #fff;
+  font-size: clamp(2.3rem, 4.6vw, 3.6rem);
+  font-weight: 700;
+  font-stretch: 78%;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.4rem;
+}
+
+.hero-copy p {
+  font-size: 1.2rem;
+  line-height: 1.55;
+  max-width: 30rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.hero-actions .btn-warning { color: var(--mm-deep); }
+
+/* Hero: one synthetic patient passing through all three tools */
+
+figure.suite-demo {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+  font-size: 0.86rem;
+}
+
+.sd-card {
+  background: #fff;
+  color: var(--mm-ink);
+  border-radius: 8px;
+  padding: 0.95rem 1.1rem;
+  box-shadow: 0 24px 48px -24px rgba(0, 20, 40, 0.6);
+  animation: card-in 0.5s ease-out both;
+  animation-delay: calc(0.2s + var(--i) * 0.25s);
+}
+.sd-card p { margin: 0; }
+.sd-genomics { align-self: center; }
+.sd-ai { grid-column: 1 / -1; margin-left: 12%; }
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+.sd-tool {
+  font-weight: 700;
+  font-stretch: 85%;
+  font-size: 0.8rem;
+  color: var(--mm-blue);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.5rem !important;
+  border-bottom: 1px solid var(--mm-rule);
+}
+
+.sd-trials { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.sd-trials th { font-weight: 600; color: var(--mm-gray); font-size: 0.74rem; text-align: left; padding: 0 0 0.25rem; }
+.sd-trials td { padding: 0.2rem 0; border-top: 1px solid var(--mm-mist); }
+.sd-trials th:last-child, .sd-trials td:last-child { text-align: right; }
+.sd-trials tbody tr:first-child td { color: var(--mm-deep); font-weight: 600; }
+
+.sd-line { margin-bottom: 0.6rem !important; }
+.sd-result { font-weight: 600; color: var(--mm-deep); }
+.sd-label { display: block; color: var(--mm-gray); font-size: 0.74rem; font-weight: 600; }
+.sd-summary { margin-bottom: 0.6rem !important; line-height: 1.45; }
+
+.sd-ranked { list-style: none; margin: 0; padding: 0; }
+.sd-ranked li {
+  display: flex;
+  align-items: baseline;
+  padding: 0.3rem 0;
+  border-top: 1px solid var(--mm-rule);
+}
+.sd-ranked b { color: var(--mm-deep); font-variant-numeric: tabular-nums; margin-right: 0.35rem; }
+
+.dot {
+  flex: none;
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 0.45rem;
+  border-radius: 50%;
+  background: var(--mm-orange);
+}
+.dot-muted { background: transparent; box-shadow: inset 0 0 0 2px var(--mm-orange); }
+
+.suite-demo figcaption {
+  grid-column: 1 / -1;
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #8eaec4;
+}
+
+/* The match demo: CTML on the left, a patient card that satisfies it */
+
+figure.match-demo {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr min(19rem, 70%);
+  column-gap: 1.5rem;
+  align-items: start;
+}
+
+.match-demo .ctml-window { grid-column: 1 / -1; }
+
+.ctml-window {
+  background: #06253b;
+  border: 1px solid #1d4966;
+  border-radius: 8px;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+
+.ctml-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid #1d4966;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  color: #7fa3bb;
+}
+
+.ctml-lang { color: var(--mm-light); }
+
+.ctml-code {
+  margin: 0;
+  padding: 1rem 0 4rem;
+  background: transparent;
+  border: 0;
+  color: #9fb9cb;
+  font-size: 0.76rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.ctml-code code {
+  display: block;
+  padding: 0 1rem;
+  color: inherit;
+  background: transparent;
+  white-space: pre;
+  font-variant-ligatures: none;
+}
+
+.ctml-code .k { color: #8fd3f0; }
+.ctml-code .s { color: #e8eef2; }
+
+.ctml-code .hit {
+  color: #9fb9cb;
+  display: inline-block;
+  min-width: calc(100% + 2rem);
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  border-left: 3px solid var(--mm-orange);
+  background: rgba(255, 163, 0, 0.16);
+  animation: hit-in 0.5s ease-out both;
+  animation-delay: calc(0.5s + var(--i) * 0.28s);
+}
+
+@keyframes hit-in {
+  from { border-left-color: transparent; background: transparent; }
+}
+
+.patient-card {
+  grid-column: 2;
+  grid-row: 2;
+  margin: -3.25rem -0.75rem 0 0;
+  position: relative;
+  background: #fff;
+  color: var(--mm-ink);
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  box-shadow: 0 24px 48px -20px rgba(0, 20, 40, 0.55);
+  font-size: 0.85rem;
+}
+
+.patient-label {
+  margin: 0 0 0.5rem;
+  color: var(--mm-gray);
+  font-size: 0.78rem;
+}
+
+.patient-card dl { margin: 0; }
+.patient-card dl > div {
+  display: grid;
+  grid-template-columns: 5.2rem 1fr;
+  padding: 0.3rem 0;
+  border-top: 1px solid var(--mm-rule);
+}
+.patient-card dt { font-weight: 600; color: var(--mm-deep); }
+.patient-card dd { margin: 0; }
+
+.chip {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 3px;
+  background: var(--mm-mist);
+  white-space: nowrap;
+}
+.chip-hit { background: #fff1d6; box-shadow: inset 0 0 0 1px var(--mm-orange); }
+
+.patient-result {
+  margin: 0.6rem 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--mm-rule);
+  font-weight: 650;
+  color: var(--mm-deep);
+}
+.demo-panel {
+  background: var(--mm-deep);
+  border-radius: 8px;
+  padding: 2rem 2rem 1.25rem;
+  margin: 2rem 0 1rem;
+}
+
+.match-demo figcaption {
+  grid-column: 1;
+  grid-row: 2;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #8eaec4;
+}
+
+/* ---------- Impact figures (Genomics page) ---------- */
+
+.impact {
+  grid-column: 1 / -1;
+  border-top: 2px solid var(--mm-deep);
+  padding-top: 1.25rem;
+}
+
+.impact-caption {
+  color: var(--mm-gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.impact-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0;
+}
+
+.impact-list dt {
+  font-size: 3rem;
+  font-weight: 700;
+  font-stretch: 75%;
+  line-height: 1;
+  color: var(--mm-blue);
+  margin-bottom: 0.4rem;
+}
+
+.impact-list dd { margin: 0; max-width: 16rem; }
+
+/* ---------- Steps (a real sequence, so they are numbered) ---------- */
+
+.steps {
+  counter-reset: step;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.step {
+  counter-increment: step;
+  position: relative;
+  padding-top: 3rem;
+  border-top: 1px solid #b9c9d4;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--mm-deep);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step h3 { margin-top: 0; }
+.step p { font-size: 0.95rem; }
+.step p:last-child a { font-weight: 600; }
+
+
+/* ---------- Modes ---------- */
+
+.modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.mode {
+  border-left: 3px solid var(--mm-light);
+  padding-left: 1.25rem;
+}
+
+.mode h3 { margin-top: 0; }
+
+/* ---------- Suite: problem statement and three equal pillars ---------- */
+
+.suite-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+.intro-copy p { color: #3c4a55; font-size: 1.08rem; }
+
+/* Two headline figures beside the intro */
+.gap-stats dl { margin: 0; display: grid; gap: 1.5rem; }
+.gap-stats dl > div { border-top: 2px solid var(--mm-deep); padding-top: 1rem; }
+.gap-stats dt {
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-stretch: 75%;
+  line-height: 1;
+  color: var(--mm-blue);
+  margin-bottom: 0.4rem;
+}
+.gap-stats dd { margin: 0; color: #3c4a55; max-width: 26rem; }
+
+.todo {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border: 1px dashed #b3261e;
+  color: #b3261e;
+  font-size: 0.9rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid var(--mm-deep);
+  padding-top: 1.25rem;
+}
+.pillar p { margin-bottom: 0.9rem; }
+.pillar h3 { margin: 0.2rem 0 0.8rem; font-size: 1.45rem; }
+.pillar-kind { color: var(--mm-blue); font-weight: 600; font-size: 0.95rem; }
+.pillar-status { color: var(--mm-gray); font-size: 0.92rem; }
+/* Pandoc wraps the h3 and what follows it in a <section> */
+.pillar > section { flex: 1; display: flex; flex-direction: column; }
+.pillar section > p:last-child { margin-top: auto; margin-bottom: 0; }
+.pillar section > p:last-child a { font-weight: 600; }
+
+/* ---------- Open source band ---------- */
+
+.open-grid, .evidence-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 4rem;
+  align-items: start;
+}
+.open-grid p, .evidence-grid p { max-width: 36rem; }
+
+.open-link, .evidence-item {
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--mm-rule);
+}
+.open-link:last-child { border-bottom: 1px solid var(--mm-rule); }
+.open-link p { margin: 0; }
+.open-venue { font-size: 0.85rem; color: var(--mm-gray); }
+.open-link a { font-weight: 600; font-size: 1.05rem; }
+
+/* ---------- Evidence band (deep blue) ---------- */
+
+.evidence-item { border-top-color: #1d4966; }
+.evidence-item:first-child { padding-top: 0; border-top: 0; }
+.evidence-item p { margin: 0 0 0.5rem; }
+.evidence-when { font-size: 0.85rem; color: #8eaec4; }
+.evidence-item a { font-weight: 600; }
+
+/* ---------- Home page news listing ---------- */
+
+/* Quarto renders the listing into #listing-latest-news */
+#listing-latest-news .quarto-post {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  column-gap: 1.5rem;
+  padding: 1.1rem 0;
+  margin: 0;
+  border-top: 1px solid var(--mm-rule);
+  border-bottom: 0;
+}
+#listing-latest-news .metadata { grid-column: 1; grid-row: 1; padding: 0; flex-basis: auto; }
+#listing-latest-news .body { grid-column: 2; grid-row: 1; padding: 0; }
+#listing-latest-news .listing-title { margin: 0 0 0.3rem; font-size: 1.15rem; }
+#listing-latest-news .listing-description p { margin: 0; color: #3c4a55; }
+#listing-latest-news .listing-date { font-weight: 600; }
+
+/* ---------- Publications ---------- */
+
+.pub-list { margin-top: 1.5rem; }
+
+.pub {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--mm-rule);
+}
+.pub p { margin: 0; }
+.pub > p:first-child { grid-row: span 2; }
+.pub-year { font-weight: 700; color: var(--mm-gray); font-variant-numeric: tabular-nums; }
+.pub a { font-weight: 600; font-size: 1.08rem; line-height: 1.35; }
+.pub-venue { color: var(--mm-gray); font-size: 0.92rem; }
+
+.more-link { display: inline-block; margin-top: 1.25rem; font-weight: 600; }
+
+/* ---------- Adopt CTA ---------- */
+
+.adopt-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.adopt-grid p { max-width: 36rem; }
+.adopt-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: flex-end; }
+
+/* ---------- Interior pages ---------- */
+
+.quarto-title-banner {
+  background: var(--mm-deep) !important;
+  padding: 3.5rem 0 3rem;
+}
+.quarto-title-banner .title {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 700;
+  font-stretch: 80%;
+}
+.quarto-title-banner .subtitle,
+.quarto-title-banner .description p {
+  color: #cfe0ec;
+  font-size: 1.15rem;
+  max-width: 40rem;
+}
+
+#quarto-content main section.level2 > h2 {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+
+.req-table table { font-size: 0.95rem; }
+
+/* News listing */
+.quarto-listing .listing-title { font-weight: 650; color: var(--mm-deep); font-size: 1.2rem; }
+.quarto-listing .listing-date { color: var(--mm-gray); font-variant-numeric: tabular-nums; }
+
+/* FAQ */
+.faq h3 { font-size: 1.12rem; margin-top: 2rem; }
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 2rem 1.5rem;
+  margin: 2rem 0 1rem;
+}
+.person { text-align: center; }
+.avatar {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--mm-mist);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  font-size: 2rem;
+  font-weight: 700;
+  font-stretch: 80%;
+  color: var(--mm-blue);
+}
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.person-name { margin: 0.6rem 0 0; font-weight: 600; color: var(--mm-deep); line-height: 1.3; }
+.person-role { margin: 0; font-size: 0.88rem; color: var(--mm-gray); }
+
+/* Research page */
+.talks ul { list-style: none; padding: 0; }
+.talks li {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-top: 1px solid var(--mm-rule);
+}
+.talk-event { color: var(--mm-gray); font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+
+/* Contact */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.contact-option {
+  border-top: 3px solid var(--mm-blue);
+  background: var(--mm-mist);
+  padding: 1.25rem 1.25rem 0.5rem;
+  border-radius: 0 0 6px 6px;
+}
+.contact-option h3 { margin-top: 0; font-size: 1.15rem; }
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  grid-column: screen-start / screen-end;  /* full-bleed inside Quarto's page grid */
+  margin-top: 4rem;
+  background: var(--mm-deep);
+  color: #b8cddb;
+  padding: 3.5rem 0 3rem;
+  font-size: 0.92rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+}
+.footer-logo img { width: 200px; height: auto; margin-bottom: 1.25rem; }
+.footer-org p { max-width: 28rem; }
+.footer-funding { font-size: 0.85rem; color: #93afc2; }
+.site-footer h2 {
+  border: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 650;
+  margin: 0 0 0.75rem;
+}
+.site-footer ul { list-style: none; padding: 0; margin: 0; }
+.site-footer li { margin-bottom: 0.4rem; }
+.site-footer a { color: #e3eef5; }
+
+/* Quarto puts its own footer margin in; the custom footer replaces it */
+.nav-footer { display: none; }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 991px) {
+  .hero-grid, .open-grid, .evidence-grid, .adopt-grid { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .pillars, .suite-intro { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .footer-org { grid-column: 1 / -1; }
+  .steps { grid-template-columns: 1fr 1fr; row-gap: 3rem; }
+  .adopt-actions { justify-content: flex-start; }
+}
+
+@media (max-width: 680px) {
+  #quarto-content > .band { padding: 3.5rem 0; }
+  .modes, .steps, .impact-list, .footer-grid { grid-template-columns: 1fr; }
+  figure.suite-demo { grid-template-columns: minmax(0, 1fr); }
+  .sd-genomics { align-self: start; }
+  .sd-ai { margin: 0; }
+  .demo-panel { padding: 1.25rem 1rem 1rem; }
+  #listing-latest-news .quarto-post { grid-template-columns: minmax(0, 1fr); }
+  #listing-latest-news .body, #listing-latest-news .metadata { grid-column: 1; grid-row: auto; }
+  .impact-list { gap: 1.25rem; }
+  figure.match-demo { grid-template-columns: minmax(0, 1fr); }
+  .patient-card { grid-column: 1; margin: -2.5rem 0 0 1rem; }
+  .match-demo figcaption { grid-column: 1; grid-row: 3; }
+  .ctml-code { font-size: 0.7rem; padding-bottom: 3rem; }
+  .pub { grid-template-columns: 1fr; }
+  .pub > p:first-child { grid-row: auto; }
+  .talks li { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ctml-code .hit, .sd-card { animation: none; }
+}
+
+/* Home page ends on a colored band, so the footer butts up against it */
+.page-layout-custom > .site-footer { margin-top: 0; }
+#quarto-content > .site-footer { padding-top: 3.5rem; }
+
+.navbar-brand .navbar-logo { height: 28px; width: 28px; max-height: none; }
+
+/* Open source page: keep repo names and licenses on one line; scroll on small screens */
+.repo-table { overflow-x: auto; }
+.repo-table table { font-size: 0.95rem; }
+.repo-table td:first-child, .repo-table td:last-child { white-space: nowrap; }
+
+/* ---------- Product screenshots ---------- */
+
+/* Quarto puts the class on the <img> and wraps it in its own figure */
+.quarto-figure:has(img.screenshot) { margin: 2.5rem 0 2rem; }
+img.screenshot {
+  border: 1px solid var(--mm-rule);
+  border-radius: 8px;
+  box-shadow: 0 24px 48px -28px rgba(0, 30, 60, 0.35);
+}
+img.screenshot-narrow { max-width: min(34rem, 100%); }
+.screenshot figcaption, .quarto-figure figcaption { font-size: 0.85rem; color: var(--mm-gray); margin-top: 0.75rem; }
+
+/* Cited problem statements on the home page */
+.cite { font-size: 0.7em; line-height: 0; margin-left: 0.1em; }
+.cite a { font-weight: 600; text-decoration: none; }
+.pillar-problem {
+  display: block;
+  padding-left: 0.85rem;
+  border-left: 3px solid var(--mm-light);
+  color: var(--mm-deep);
+  font-weight: 600;
+  line-height: 1.45;
+}
+.sources {
+  margin: 3rem 0 0;
+  padding: 1rem 0 0 1.2rem;
+  border-top: 1px solid var(--mm-rule);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--mm-gray);
+}
+.sources li { margin-bottom: 0.35rem; padding-left: 0.2rem; }
+.sources li:target { background: #fff6e0; }
+.sources a { word-break: break-word; }

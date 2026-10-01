@@ -1,0 +1,82 @@
+---
+title: "Frequently asked questions"
+subtitle: "The MatchMiner tools, what they need, and what Dana-Farber can share."
+---
+
+::: {.faq}
+
+## The tools
+
+### What's the difference between MatchMiner Genomics and MatchMiner-AI?
+
+[Genomics](genomics.qmd) matches patients to precision medicine trials using structured sequencing results and trial criteria that curators write in CTML. [MatchMiner-AI](matchminer-ai.qmd) uses language models to read clinical notes and match patients against all open trials, including ones with no genomic criteria. Dana-Farber runs both.
+
+### Does MatchMiner-AI send patient data outside my institution?
+
+No. MatchMiner-AI runs locally, inside the health system.
+
+### What data was MatchMiner-AI trained on?
+
+Synthetic medical records only. That's why the model weights and training data can be shared. The datasets are on [Hugging Face](open-source.qmd#models-and-data).
+
+### Can I use MatchMiner Dashboard?
+
+Not yet. The Dashboard is in production at Dana-Farber, and its code is due for release as open source in winter 2026–27.
+
+## Setting up MatchMiner Genomics
+
+### Can I set up MatchMiner Genomics at my institution?
+
+Yes. MatchMiner Genomics is open source, and it is HIPAA compliant when hosted behind an institutional firewall. The [documentation](https://matchminer.gitbook.io/matchminer/) covers deployment and a demo setup. See [Get started](get-started.qmd) for an overview.
+
+### What data do I need?
+
+The MatchEngine and web interface need structured [patient genomic and clinical data](https://matchminer.gitbook.io/matchminer/deployment/patient-data), and trial eligibility criteria written in [CTML](https://matchminer.gitbook.io/matchminer/deployment/ctml-and-trial-curation).
+
+### What hardware and software do I need?
+
+A small instance runs on a laptop with 4 CPUs and 4 GB of memory. For comparison, Dana-Farber's deployment (about 60,000 clinical samples, 400 trials, 600 saved filters, and 500 users) uses 45 CPU cores and 128 GB of memory.
+
+### What staff do I need?
+
+We suggest at least two scientists to curate and review CTML documents, and at least one software engineer to set up MatchMiner. The engineer builds the [data ingestion](https://matchminer.gitbook.io/matchminer/deployment/importing-data) pipelines and integrates MatchMiner with institutional systems such as authentication.
+
+### How do I write trial eligibility in CTML?
+
+You can write CTML by hand in a text editor, or use the [curation interface developed at Memorial Sloan Kettering](https://github.com/oncokb/matchminer-curate).
+
+### Where are the documentation and source code?
+
+Documentation, including example CTML and example patient data, is on [GitBook](https://matchminer.gitbook.io/matchminer/). Source code for the MatchEngine, API, and web interface is on [GitHub](https://github.com/dfci/matchminer).
+
+## Using MatchMiner
+
+### Who uses MatchMiner?
+
+Clinicians, clinical research staff, and trial investigators use MatchMiner to find trial matches. Trial teams use the Dashboard to track their trial portfolios.
+
+### What has MatchMiner Genomics' impact been at Dana-Farber?
+
+In January 2022, Dana-Farber had about 170 open precision medicine trials in MatchMiner. Patients matched to 6 trials on average, and 84% of patients had at least one match. By then, more than 220 patients had enrolled on a trial as a result of a MatchMiner match.
+
+## Sharing data
+
+### Can Dana-Farber share its trial CTML files?
+
+No. Dana-Farber's CTML files are not available for sharing at this time.
+
+### Can Dana-Farber share patient data?
+
+De-identified genomic data and limited clinical data are available through [AACR Project GENIE](https://www.aacr.org/professionals/research/aacr-project-genie/). No other patient data is available for sharing at this time.
+
+## Getting help
+
+### I have a question that isn't answered here.
+
+[Contact the team](contact.qmd).
+
+### I found a bug or a server problem.
+
+For bugs in the open-source code, open an issue in the relevant [GitHub repository](open-source.qmd#code). For anything else, [contact the team](contact.qmd).
+
+:::

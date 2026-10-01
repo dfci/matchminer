@@ -1,0 +1,11 @@
+---
+title: "MatchMiner-AI selected for a Llama Impact Grant"
+description: "MatchMiner-AI joins the inaugural cohort of Meta's Llama Impact Grants."
+date: 2024-09-24
+---
+
+[MatchMiner-AI](../../matchminer-ai.qmd) was selected for the inaugural cohort of Meta's Llama Impact Grants. The grant supports development of an open-source AI platform for clinical trial matching.
+
+The project uses Llama models to summarize unstructured clinical notes and trial eligibility criteria, so that suitable trials can be found for each patient. The models are integrated into MatchMiner and evaluated with clinical partners.
+
+Read [Meta's announcement of the grant recipients](https://ai.meta.com/blog/llama-impact-grant-innovation-award-winners-2024/).

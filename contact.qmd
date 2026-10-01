@@ -1,0 +1,36 @@
+---
+title: "Contact"
+subtitle: "Questions about deploying MatchMiner, collaborating, or joining the team."
+---
+
+::: {.contact-options}
+
+::: {.contact-option}
+### Email the team
+
+For deployment questions, collaborations, and open roles. Tell us your institution and your role (clinician, research coordinator, investigator, engineer) so we can route your question.
+
+[{{< var contact_email >}}](mailto:{{< var contact_email >}})
+:::
+
+::: {.contact-option}
+### Report a bug
+
+Found a problem in MatchMiner Genomics or MatchMiner-AI? Open an issue in the relevant repository with steps to reproduce it.
+
+[Find the repository](open-source.qmd#code)
+:::
+
+::: {.contact-option}
+### Read the docs
+
+Setup instructions and references for each tool.
+
+[MatchMiner Genomics docs](https://matchminer.gitbook.io/matchminer/)
+
+[MatchMiner-AI docs](https://dfci.github.io/matchminer-ai-inference)
+:::
+
+:::
+
+Many common questions are answered in the [FAQ](faq.qmd).

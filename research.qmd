@@ -1,0 +1,60 @@
+---
+title: "Research"
+subtitle: "Papers and conference presentations about MatchMiner and MatchMiner-AI."
+---
+
+## Publications
+
+::: {.pub-list}
+
+::: {.pub}
+[2025]{.pub-year}
+
+[Clinical Trial Notifications Triggered by Artificial Intelligence–Detected Cancer Progression](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)
+
+[Mazor T., Kehl K.L. et al. JAMA Network Open 2025;8(4):e252013]{.pub-venue}
+:::
+
+::: {.pub}
+[2024]{.pub-year}
+
+[MatchMiner-AI: An Open-Source Solution for Cancer Clinical Trial Matching](https://arxiv.org/abs/2412.17228)
+
+[Altreuter J. et al. arXiv:2412.17228]{.pub-venue}
+:::
+
+::: {.pub}
+[2022]{.pub-year}
+
+[MatchMiner: An open-source platform for cancer precision medicine](https://www.nature.com/articles/s41698-022-00312-5)
+
+[Klein H. et al. npj Precision Oncology 2022;6:69]{.pub-venue}
+:::
+
+::: {.pub}
+[2017]{.pub-year}
+
+[MatchMiner: an open source computational platform for real-time matching of cancer patients to precision medicine clinical trials using genomic and clinical criteria](https://doi.org/10.1101/199489)
+
+[Lindsay J. et al. bioRxiv 199489]{.pub-venue}
+:::
+
+:::
+
+If you use MatchMiner Genomics in your work, please cite the 2022 npj Precision Oncology paper. For MatchMiner-AI, cite the 2024 arXiv preprint.
+
+## Conference presentations
+
+::: {.talks}
+- [AACR 2024 poster]{.talk-event} [Investigating clinical trial eligibility criteria to improve MatchMiner trial matching]{}
+- [ASCO 2023 poster]{.talk-event} [Identifying clinical trial candidates using AI predictions of treatment change: A pilot implementation study]{}
+- [AACR 2023 poster, abstract 1067]{.talk-event} [MatchMiner: An open-source AI precision medicine trial matching platform]{}
+- [AACR 2022 poster, abstract 4091]{.talk-event} [Design and adoption of MatchMiner at Dana-Farber Cancer Institute]{}
+- [AACR MTCT 2021 poster]{.talk-event} [MatchMiner: An open-source computational platform that accelerates patient enrollment on to precision medicine trials](https://cancerres.aacrjournals.org/content/81/13_Supplement/1198.abstract)
+- [AACR 2021 poster]{.talk-event} [MatchMiner: An open-source computational platform that accelerates patient enrollment on to precision medicine trials](https://aacrjournals.org/cancerres/article/81/13_Supplement/1198/667175/Abstract-1198-MatchMiner-An-open-source)
+- [AACR MTCT 2020 poster]{.talk-event} [MatchMiner: Computational matching of cancer patients to precision medicine clinical trials](https://www.ejcancer.com/article/S0959-8049(20)31112-6/fulltext)
+- [AACR 2020 talk]{.talk-event} [Platform for genomically-driven matching of cancer patients to precision medicine clinical trials](https://cancerres.aacrjournals.org/content/80/16_Supplement/3382.short)
+- [AACR MTCT 2019 poster]{.talk-event} [MatchMiner: An open-source computational platform for genomically-driven matching of cancer patients to precision medicine clinical trials](https://mct.aacrjournals.org/content/18/12_Supplement/A024)
+- [AACR 2018 poster]{.talk-event} [Assessing patient trial readiness for precision cancer medicine clinical trials through computational trial matching](https://aacrjournals.org/cancerres/article/78/13_Supplement/2288/626562/Abstract-2288-Assessing-patient-trial-readiness)
+- [ASCO 2017 poster]{.talk-event} [Algorithmic matching of genomic profiles to precision cancer medicine clinical trials at DFCI](https://ascopubs.org/doi/10.1200/JCO.2017.35.15_suppl.6620)
+:::
