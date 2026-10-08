@@ -63,11 +63,19 @@ If you'd rather not edit YAML by hand, Memorial Sloan Kettering built a [curatio
 
 ## MatchMiner-AI {#matchminer-ai}
 
-The inference pipeline is a Python package for Python 3.12 or later:
+The inference pipeline is a Python package:
 
 ```bash
 pip install matchminer-ai
 ```
+
+### What you need
+
+- **Python 3.12 or later.**
+- **A GPU** for the embedding and classification steps. They haven't been tested on CPU and may be very slow.
+- **A language model.** The package can run it itself, or connect to a model server you run or choose, through an OpenAI-compatible API.
+- **Trials.** One row per trial, with an ID, title, brief summary, and eligibility criteria. The documentation shows how to build this from ClinicalTrials.gov.
+- **Patient notes.** One row per clinical note, with a patient ID, the note text, and the note date.
 
 The package is still before version 1 and under active development. Its [documentation](https://dfci.github.io/matchminer-ai-inference) covers requirements, GPU recommendations, installation, and a quickstart with an example notebook, and explains how to choose between local and remote model inference. The models and synthetic training data are on [Hugging Face](open-source.qmd#models-and-data), and the [training code](https://github.com/dfci/matchminer-ai-training) is public. The code is released for non-commercial use under CC BY-NC-ND 4.0.
 

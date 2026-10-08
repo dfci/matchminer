@@ -35,6 +35,10 @@ In a randomized trial run from 2023 to 2024, AI flagged patients whose cancer wa
 
 [OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd), which began recruiting in 2026, is the first randomized study of MatchMiner-AI's matching, and is designed around that result. When MatchMiner-AI detects progression, the oncologist gets a ranked list of possible trials drawn from the whole record.
 
+## Run it at your institution
+
+MatchMiner-AI is free for non-commercial use. [Get started](get-started.qmd#matchminer-ai) covers what it needs: hardware, a language model, trial data, and patient notes.
+
 ## Read more
 
 Altreuter J. et al., [MatchMiner-AI: An Open-Source Solution for Cancer Clinical Trial Matching](https://arxiv.org/abs/2412.17228). arXiv:2412.17228 (2024).
