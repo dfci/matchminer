@@ -8,10 +8,6 @@ MatchMiner started in 2016 as a collaboration between software engineers, data s
 ```{=html}
 <div class="team-grid">
   <div class="person">
-    <div class="avatar" aria-hidden="true">EC<img src="assets/img/team/ethan-cerami.webp" alt="" loading="lazy" onerror="this.remove()"></div>
-    <p class="person-name">Ethan Cerami</p>
-  </div>
-  <div class="person">
     <div class="avatar" aria-hidden="true">MH<img src="assets/img/team/michael-hassett.webp" alt="" loading="lazy" onerror="this.remove()"></div>
     <p class="person-name">Michael Hassett</p>
   </div>
@@ -22,6 +18,10 @@ MatchMiner started in 2016 as a collaboration between software engineers, data s
   <div class="person">
     <div class="avatar" aria-hidden="true">TM<img src="assets/img/team/tali-mazor.webp" alt="" loading="lazy" onerror="this.remove()"></div>
     <p class="person-name">Tali Mazor</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">JA<img src="assets/img/team/jennifer-altreuter.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Jennifer Altreuter</p>
   </div>
   <div class="person">
     <div class="avatar" aria-hidden="true">HK<img src="assets/img/team/harry-klein.webp" alt="" loading="lazy" onerror="this.remove()"></div>

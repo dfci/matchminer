@@ -158,7 +158,7 @@ One view of the trials a disease-specific trial team runs: open slots, enrollmen
 
 The matching engine, the web application, and MatchMiner-AI's model weights, inference code, and synthetic training data are all public. Any cancer center can run them inside its own network and see exactly how a match was made. The Dashboard code is due for release in winter 2026–27.
 
-Other centers already build on it. Princess Margaret Cancer Centre in Toronto is developing a new version of the matching engine with Dana-Farber. [See who uses MatchMiner.](adopters.qmd)
+Other centers already build on it. Princess Margaret Cancer Centre in Toronto leads CTIMS, an open-source trial matching system that uses the MatchMiner matching engine. [See who uses MatchMiner.](adopters.qmd)
 :::
 
 ::: {.open-links}
