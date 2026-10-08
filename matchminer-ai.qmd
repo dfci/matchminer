@@ -3,7 +3,7 @@ title: "MatchMiner-AI"
 subtitle: "Language models that read the medical record and suggest clinical trials for the oncologist to review."
 ---
 
-Most eligibility criteria, such as prior lines of therapy, performance status, organ function, and extent of disease, are recorded in free-text clinical notes rather than structured fields. Genomic matching can't see them. MatchMiner-AI can.
+Most eligibility criteria, such as prior lines of therapy, performance status, organ function, and extent of disease, are recorded in free-text clinical notes rather than structured fields, where genomic matching can't use them. MatchMiner-AI reads them from the notes.
 
 ## How it works
 
@@ -11,7 +11,11 @@ MatchMiner-AI uses large language models to read a patient's clinical notes, kee
 
 ![MatchMiner-AI at Dana-Farber. A cancer summary on the left, suggested trials with AI-written trial summaries on the right.](assets/img/screenshots/matchminer-ai-trial-search.webp){.screenshot .column-body-outset fig-alt="MatchMiner-AI trial search. On the left, a typed cancer summary: metastatic lung adenocarcinoma, PD-L1 70 percent positive, KRAS G12D mutation, treated with carboplatin, pemetrexed, and pembrolizumab, plus a list of exclusion conditions. On the right, suggested trials, each with phase, location, contact, principal investigator, and a plain-language trial summary with thumbs-up and thumbs-down buttons for feedback. Under one trial, a check mark says there is no evidence the patient meets common exclusion criteria."}
 
-The released models fall into four families: TrialSpace (retrieval), TrialChecker (eligibility), BoilerplateChecker (exclusion factors), and OncoReasoning.
+The released models include three families:
+
+- **TrialSpace** finds candidate trials for a patient.
+- **TrialChecker** judges whether the patient meets a trial's eligibility criteria.
+- **BoilerplateChecker** checks the common exclusion criteria most trials share.
 
 ## Built to be shared
 

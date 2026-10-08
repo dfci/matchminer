@@ -38,10 +38,10 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
   </div>
   <div class="sd-card sd-ai" style="--i:1">
     <p class="sd-tool">MatchMiner-AI</p>
-    <p class="sd-summary"><span class="sd-label">Summary from notes</span> Metastatic lung adenocarcinoma, EGFR L858R. Progressed on osimertinib. ECOG 1, adequate organ function.</p>
+    <p class="sd-summary"><span class="sd-label">Summary from notes</span> Metastatic lung adenocarcinoma, EGFR L858R. Progressed on osimertinib. Good performance status, adequate organ function.</p>
     <ol class="sd-ranked">
-      <li><span class="dot" aria-hidden="true"></span><span><b>25-032</b> EGFR-mutant NSCLC after osimertinib</span></li>
-      <li><span class="dot dot-muted" aria-hidden="true"></span><span><b>24-117</b> EGFR L858R NSCLC</span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>25-032</b> EGFR-mutant lung cancer after osimertinib</span></li>
+      <li><span class="dot dot-muted" aria-hidden="true"></span><span><b>24-117</b> EGFR L858R lung cancer</span></li>
     </ol>
   </div>
   <div class="sd-card sd-dash" style="--i:2">
@@ -55,7 +55,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
       </tbody>
     </table>
   </div>
-  <figcaption id="suite-demo-caption">Synthetic example. Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, and Dashboard shows which trials have open slots.</figcaption>
+  <figcaption id="suite-demo-caption">Synthetic example; trial numbers are made up. Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, an EGFR-targeted drug, and Dashboard shows which trials have open slots.</figcaption>
 </figure>
 ```
 
@@ -68,11 +68,11 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
 ::: {.suite-intro}
 
 ::: {.intro-copy}
-## Matching patients to trials at scale
+## Why trial matching is hard
 
 Clinical trials are how new cancer treatments reach patients. Yet fewer than 1 in 10 adults with cancer take part,<sup class="cite"><a href="#src-unger">1</a></sup> and many trials miss their enrollment goals or never finish.<sup class="cite"><a href="#src-cheng">2</a>,<a href="#src-stensland">3</a></sup>
 
-Oncology trials are complex, with multiple arms and narrowly defined eligibility, often including specific treatment and biomarker requirements.<sup class="cite"><a href="#src-jin">4</a></sup> Working through those criteria for every patient takes time that oncologists and trial teams rarely have. MatchMiner does that work at scale, checking patients against every open trial so the right trials come up for the right patients.
+Oncology trials are complex, with multiple arms and narrowly defined eligibility, often including specific treatment and biomarker requirements.<sup class="cite"><a href="#src-jin">4</a></sup> Working through those criteria for every patient takes time that oncologists and trial teams rarely have. MatchMiner does that work at scale, checking patients against every open trial so oncologists and trial teams see the trials each patient may qualify for.
 :::
 
 ```{=html}
@@ -101,7 +101,7 @@ Oncology trials are complex, with multiple arms and narrowly defined eligibility
 
 [Patients with the specific genomic alterations a trial needs are hard to find by hand.]{.pillar-problem}
 
-Each trial's eligibility is written in a structured format, CTML, and a rules engine checks every patient's sequencing results against it. It finds trials for a patient and patients for a trial.
+Each trial's eligibility is written in a structured format, and a matching engine checks every patient's sequencing results against it. It finds trials for a patient and patients for a trial.
 
 [In clinical use at Dana-Farber since 2016.]{.pillar-status}
 
@@ -129,9 +129,9 @@ Language models read a patient's clinical notes and match them against all open 
 
 [Trial teams track open trials, slots, and accrual across several systems and a lot of email.]{.pillar-problem}
 
-One view of a disease center's trials: open slots, accrual, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
+One view of the trials a disease-specific trial team runs: open slots, enrollment, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
 
-[In production at Dana-Farber across several disease centers.]{.pillar-status}
+[In production at Dana-Farber across several disease-specific trial teams.]{.pillar-status}
 
 [About Dashboard](dashboard.qmd)
 :::
@@ -158,7 +158,7 @@ One view of a disease center's trials: open slots, accrual, and milestones. Deta
 
 The matching engine, the web application, and MatchMiner-AI's model weights, inference code, and synthetic training data are all public. Any cancer center can run them inside its own network and see exactly how a match was made. The Dashboard code is due for release in winter 2026–27.
 
-Other centers already build on it. Princess Margaret Cancer Centre (UHN) is developing a new version of the matching engine with Dana-Farber, and Memorial Sloan Kettering's OncoKB team has maintained its own MatchMiner forks.
+Other centers already build on it. Princess Margaret Cancer Centre in Toronto is developing a new version of the matching engine with Dana-Farber, and Memorial Sloan Kettering's OncoKB team has maintained its own MatchMiner forks.
 :::
 
 ::: {.open-links}

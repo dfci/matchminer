@@ -25,16 +25,15 @@ The [matchminer](https://github.com/dfci/matchminer) repository is the starting 
 
 ## Models and data {#models-and-data}
 
-MatchMiner-AI's models and training data are on Hugging Face under [`ksg-dfci`](https://huggingface.co/ksg-dfci). The models are trained entirely on synthetic medical records, which is why they can be shared.
+MatchMiner-AI's models and training data are on Hugging Face under [`ksg-dfci`](https://huggingface.co/ksg-dfci) (Dana-Farber's Knowledge Systems Group). The models are trained entirely on synthetic medical records, which is why they can be shared.
 
 **Model families**
 
-- **TrialSpace** for trial retrieval, for example [TrialSpace-0526](https://huggingface.co/ksg-dfci/TrialSpace-0526)
-- **TrialChecker** for eligibility, for example [TrialChecker-0526](https://huggingface.co/ksg-dfci/TrialChecker-0526)
-- **BoilerplateChecker** for exclusion factors, for example [BoilerplateChecker-0526](https://huggingface.co/ksg-dfci/BoilerplateChecker-0526)
-- **OncoReasoning**, for example [OncoReasoning-0426](https://huggingface.co/ksg-dfci/OncoReasoning-0426)
+- **TrialSpace** finds candidate trials for a patient, for example [TrialSpace-0526](https://huggingface.co/ksg-dfci/TrialSpace-0526)
+- **TrialChecker** judges whether the patient meets a trial's eligibility criteria, for example [TrialChecker-0526](https://huggingface.co/ksg-dfci/TrialChecker-0526)
+- **BoilerplateChecker** checks the common exclusion criteria most trials share, for example [BoilerplateChecker-0526](https://huggingface.co/ksg-dfci/BoilerplateChecker-0526)
 
-The current releases are MatchMiner-AI 0426 and 0526. ONNX versions of the 0526 models are also available.
+The current releases are MatchMiner-AI 0426 and 0526. ONNX versions of the 0526 models, a portable format that runs without PyTorch, are also available.
 
 **Synthetic training data**
 
@@ -43,7 +42,7 @@ The current releases are MatchMiner-AI 0426 and 0526. ONNX versions of the 0526 
 
 ## Who else uses it
 
-Princess Margaret Cancer Centre (University Health Network) is building a new version of the matching engine in collaboration with Dana-Farber through its CTIMS project. Memorial Sloan Kettering's OncoKB team has maintained MatchMiner forks and built a [curation interface for writing CTML](https://github.com/oncokb/matchminer-curate).
+Princess Margaret Cancer Centre (University Health Network) is building a new version of the matching engine in collaboration with Dana-Farber. Memorial Sloan Kettering's OncoKB team has maintained MatchMiner forks and built a [curation interface for writing CTML](https://github.com/oncokb/matchminer-curate).
 
 ## Contributing
 

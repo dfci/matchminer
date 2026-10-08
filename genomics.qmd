@@ -3,7 +3,7 @@ title: "MatchMiner Genomics"
 subtitle: "Match patients to precision medicine trials using their tumor sequencing results. In clinical use at Dana-Farber since 2016."
 ---
 
-Precision medicine trials need patients with specific genomic alterations, and those patients are hard to find by hand. MatchMiner Genomics curates each trial's eligibility into a structured format, Clinical Trial Markup Language (CTML), and a rules engine checks every patient's clinical sequencing results against it. It works both ways: trials for a patient, and patients for a trial.
+Precision medicine trials need patients with specific genomic alterations, and those patients are hard to find by hand. MatchMiner Genomics curates each trial's eligibility into a structured format, Clinical Trial Markup Language (CTML), and the MatchEngine, its matching engine, checks every patient's clinical sequencing results against it. It works both ways: trials for a patient, and patients for a trial.
 
 ::: {.demo-panel .column-body-outset}
 ```{=html}
@@ -37,7 +37,7 @@ Precision medicine trials need patients with specific genomic alterations, and t
     </dl>
     <p class="patient-result"><span class="dot" aria-hidden="true"></span>Matches protocol 24-117, arm A</p>
   </div>
-  <figcaption id="match-demo-caption">Lung adenocarcinoma matches "Non-Small Cell Lung Cancer" because the MatchEngine walks the OncoTree hierarchy.</figcaption>
+  <figcaption id="match-demo-caption">Lung adenocarcinoma matches "Non-Small Cell Lung Cancer" because OncoTree, a standard classification of cancer types, files it under non-small cell lung cancer.</figcaption>
 </figure>
 ```
 :::
@@ -67,7 +67,7 @@ Curators write each trial's genomic, clinical, and demographic eligibility in CT
 ::: {.step}
 ### Run the MatchEngine
 
-The engine checks every patient against every open trial arm and stores the matches. It can run nightly or whenever new data lands.
+The MatchEngine checks every patient against every open trial arm and stores the matches. It can run nightly or whenever new data lands.
 
 [Source on GitHub](https://github.com/dfci/matchengine-V2)
 :::
@@ -114,7 +114,7 @@ Staff search open trials by gene, variant, or diagnosis to review options for an
 
 ## At Dana-Farber
 
-MatchMiner Genomics has been in clinical use at Dana-Farber since 2016. It reads results from Dana-Farber's OncoPanel sequencing and now also from Exact Sciences OncoExTra.
+MatchMiner Genomics has been in clinical use at Dana-Farber since 2016. It reads results from OncoPanel, Dana-Farber's in-house tumor sequencing test, and now also from the commercial Exact Sciences OncoExTra test.
 
 ::: {.impact}
 <p class="impact-caption">At Dana-Farber, January 2022</p>
