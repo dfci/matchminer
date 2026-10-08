@@ -69,7 +69,7 @@ treatment_list:
 
 Criteria can combine genomic, clinical, and demographic conditions with `and` / `or`, and CTML can be extended with new criteria. Prefix a value with `!` to exclude it: `variant_category: "!Mutation"` on a second genomic block, for example, keeps out patients who carry a specific variant. Diagnoses follow [OncoTree](https://oncotree.mskcc.org/), so a criterion for non-small cell lung cancer also matches patients with more specific diagnoses underneath it, such as lung adenocarcinoma.
 
-If you'd rather not edit YAML by hand, Memorial Sloan Kettering built a [curation interface for MatchMiner](https://github.com/oncokb/matchminer-curate).
+If you'd rather not edit YAML by hand, the CTIMS project at Princess Margaret built an [editor for writing CTML](https://www.ctims.ca).
 
 ## MatchMiner-AI {#matchminer-ai}
 

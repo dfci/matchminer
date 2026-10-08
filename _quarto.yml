@@ -21,6 +21,7 @@ website:
   bread-crumbs: false
   navbar:
     title: "MatchMiner"
+    collapse-below: xl
     left:
       - text: "Tools"
         menu:
@@ -34,6 +35,8 @@ website:
         href: get-started.qmd
       - text: "Open source"
         href: open-source.qmd
+      - text: "Who uses it"
+        href: adopters.qmd
       - text: "Research"
         href: research.qmd
       - text: "News"

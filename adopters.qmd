@@ -1,0 +1,22 @@
+---
+title: "Who uses MatchMiner"
+subtitle: "Cancer centers and research groups that run MatchMiner or build on it."
+---
+
+MatchMiner is open source, so any center can run it or build on it. These are the ones we know about.
+
+## Dana-Farber Cancer Institute, Boston
+
+Where MatchMiner is built. MatchMiner Genomics has been in clinical use since 2016, MatchMiner-AI launched for providers in February 2026, and the Dashboard is in production across several disease-specific trial teams.
+
+## Princess Margaret Cancer Centre, Toronto
+
+Princess Margaret Cancer Centre (University Health Network) leads CTIMS, an open-source trial matching system that uses MatchMiner. CTIMS adds an editor for writing trial eligibility in CTML without editing YAML by hand, runs the MatchMiner matching engine to find patients, and shows matches in cBioPortal. It is developed by the Pugh Lab and UHN's Cancer Digital Intelligence group, with contributions from Dana-Farber.
+
+- [CTIMS website](https://www.ctims.ca)
+- [Code on GitHub](https://github.com/pughlab/ctims)
+- [Documentation](https://pughlab.gitbook.io/ctims)
+
+---
+
+If your center uses MatchMiner, [let us know](contact.qmd) and we'll add you.

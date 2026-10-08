@@ -669,6 +669,14 @@ figure.match-demo {
 
 .navbar-brand .navbar-logo { height: 28px; width: 28px; max-height: none; }
 
+/* The navbar collapses below 1200px (collapse-below: xl), but Quarto's
+   collapsed-header layout is hardcoded to 992px. Between the two, keep the
+   search button top right as it is on tablets. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar .quarto-navbar-tools { order: 3; }
+  .navbar #quarto-search { order: 4; margin-left: auto; }
+}
+
 /* Open source page: keep repo names and licenses on one line; scroll on small screens */
 .repo-table { overflow-x: auto; }
 .repo-table table { font-size: 0.95rem; }

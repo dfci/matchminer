@@ -43,7 +43,7 @@ We suggest at least two scientists to curate and review CTML documents, and at l
 
 ### How do I write trial eligibility in CTML?
 
-You can write CTML by hand in a text editor, or use the [curation interface developed at Memorial Sloan Kettering](https://github.com/oncokb/matchminer-curate).
+You can write CTML by hand in a text editor, or use the [CTML editor built by the CTIMS project](https://www.ctims.ca) at Princess Margaret.
 
 ### Where are the documentation and source code?
 

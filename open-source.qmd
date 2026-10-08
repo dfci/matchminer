@@ -42,7 +42,7 @@ The current releases are MatchMiner-AI 0426 and 0526. ONNX versions of the 0526 
 
 ## Who else uses it
 
-Princess Margaret Cancer Centre (University Health Network) is building a new version of the matching engine in collaboration with Dana-Farber. Memorial Sloan Kettering's OncoKB team has maintained MatchMiner forks and built a [curation interface for writing CTML](https://github.com/oncokb/matchminer-curate).
+See [Who uses MatchMiner](adopters.qmd) for cancer centers that run MatchMiner or build on it.
 
 ## Contributing
 
