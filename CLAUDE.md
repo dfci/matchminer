@@ -69,7 +69,7 @@ For visual checks, `.claude/launch.json` defines `matchminer-site`, a static ser
 - `_brand.yml`: the source of truth for colors, fonts, and logos. Theme layering in `_quarto.yml` is `cosmo` → `brand` → `styles/theme.scss`.
 - `styles/theme.scss`: loads Archivo with its width axis (condensed headings use `font-stretch`), restores the Univers/Arial fallback stack, and tweaks components. Its `scss:defaults` block is evaluated *before* the brand layer, so `$brand-*` variables can't be used there (only in `scss:rules`). That's why a few hex values repeat.
 - `styles/site.css`: page layouts and components (bands, hero, steps, pubs, team grid, footer). CSS custom properties `--mm-*` mirror the brand palette. Responsive overrides are collected at the bottom: `max-width: 991px` (hero text and cards stack; the tool columns stack), `max-width: 680px` (phones; the hero cards go to one column), and `prefers-reduced-motion`.
-- `_includes/footer.html`: site footer with the DFCI logo, injected via `include-after-body`. Raw HTML, so Quarto doesn't resolve its links; write them root-absolute (`/faq.html`) and the post-render script makes them relative.
+- `_includes/footer.html`: site footer, injected via `include-after-body`. Raw HTML, so Quarto doesn't resolve its links; write them root-absolute (`/faq.html`) and the post-render script makes them relative.
 - `_variables.yml`: shared values, used via `{{< var name >}}`. Currently `contact_email` (matchminer@dfci.harvard.edu).
 - `setup.sh`: published at `/setup.sh` (listed in `project.resources`). The `dfci/matchminer` README pipes `matchminer.org/setup.sh` to bash. It's a shim that downloads and runs `dfci/matchminer-setup`'s real `setup.sh`, replacing the old WordPress 301 redirect. Don't delete or move it.
 - `open-source.qmd` shows each repo's license as it stands on GitHub (the user decided to keep the current licenses). Don't change them or add commentary about them.
@@ -141,7 +141,7 @@ The DFCI brand kit is kept outside the repo (location in `CLAUDE.local.md`).
 
 - Use only DFCI primary and secondary colors: Deep Blue `#003354`, Dana-Farber Blue `#00629B`, Light Blue `#41B6E6`, Orange `#FFA300`, Gray `#63666A`, Deep Gray `#4D4D4F`.
 - Orange means "match" (highlights, the match dot, the primary hero button). Never use it for body text, because it fails WCAG contrast.
-- The DFCI logo appears only in the footer: stacked, white version on deep blue, at least 192px wide (the brand's 2-inch minimum). Don't use the Lens emblem without the wordmark. Don't recolor or box the logo.
+- The site doesn't show the DFCI logo (removed from the footer on 2026-10-08). If it comes back: stacked, white version on deep blue, at least 192px wide (the brand's 2-inch minimum). Don't use the Lens emblem without the wordmark. Don't recolor or box the logo.
 - MatchMiner is an open project, so the site is MatchMiner-branded first and DFCI second.
 
 ## Content and writing

@@ -610,7 +610,6 @@ figure.match-demo {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2.5rem;
 }
-.footer-logo img { width: 200px; height: auto; margin-bottom: 1.25rem; }
 .footer-org p { max-width: 28rem; }
 .footer-funding { font-size: 0.85rem; color: #93afc2; }
 .site-footer h2 {
