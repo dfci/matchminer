@@ -77,7 +77,7 @@ The MatchEngine checks every patient against every open trial arm and stores the
 
 Clinicians and trial staff browse, filter, and act on matches in the web interface, inside your institution's firewall.
 
-[Try the demo setup](https://matchminer.gitbook.io/matchminer/)
+[Try the demo setup](https://matchminer.gitbook.io/matchminer/deployment/deployment-with-docker)
 :::
 
 :::

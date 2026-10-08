@@ -63,7 +63,7 @@ MatchMiner is supported by:
 - the National Cancer Institute, through R37 CA295653 (ACTIVATE, PI Kenneth Kehl) and R00 CA245899, which funded the earlier notifications trial
 - Meta, through a Llama Impact Grant for MatchMiner-AI
 
-MatchMiner-AI took 2nd place for the 2026 Hearst Health Prize.
+MatchMiner-AI took second place in the 2026 Hearst Health Prize.
 
 ## Join the team {#join}
 

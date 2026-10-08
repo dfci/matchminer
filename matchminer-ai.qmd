@@ -31,7 +31,7 @@ MatchMiner-AI launched for Dana-Farber providers in February 2026. Providers can
 
 ![Opening MatchMiner from Epic. Providers with access to both tools choose which one to use.](assets/img/screenshots/matchminer-ai-epic-launch.webp){.screenshot .screenshot-narrow fig-alt="A MatchMiner screen titled Choose MatchMiner Experience, under a banner reading EPIC launch detected. It describes MatchMiner Genomics, which matches genomic sequencing results to trial criteria, and MatchMiner-AI, which suggests trials for any Dana-Farber patient, including those without genomic testing. Each has a button to open it."}
 
-It took 2nd place for the 2026 Hearst Health Prize and was selected for the first cohort of Meta's Llama Impact Grants in 2024.
+It took second place in the 2026 Hearst Health Prize and was selected for the first cohort of Meta's Llama Impact Grants in 2024.
 
 ## Randomized studies
 

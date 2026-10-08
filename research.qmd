@@ -50,7 +50,6 @@ If you use MatchMiner Genomics in your work, please cite the 2022 npj Precision 
 - [ASCO 2023 poster]{.talk-event} [Identifying clinical trial candidates using AI predictions of treatment change: A pilot implementation study]{}
 - [AACR 2023 poster, abstract 1067]{.talk-event} [MatchMiner: An open-source AI precision medicine trial matching platform]{}
 - [AACR 2022 poster, abstract 4091]{.talk-event} [Design and adoption of MatchMiner at Dana-Farber Cancer Institute]{}
-- [AACR MTCT 2021 poster]{.talk-event} [MatchMiner: An open-source computational platform that accelerates patient enrollment on to precision medicine trials](https://cancerres.aacrjournals.org/content/81/13_Supplement/1198.abstract)
 - [AACR 2021 poster]{.talk-event} [MatchMiner: An open-source computational platform that accelerates patient enrollment on to precision medicine trials](https://aacrjournals.org/cancerres/article/81/13_Supplement/1198/667175/Abstract-1198-MatchMiner-An-open-source)
 - [AACR MTCT 2020 poster]{.talk-event} [MatchMiner: Computational matching of cancer patients to precision medicine clinical trials](https://www.ejcancer.com/article/S0959-8049(20)31112-6/fulltext)
 - [AACR 2020 talk]{.talk-event} [Platform for genomically-driven matching of cancer patients to precision medicine clinical trials](https://cancerres.aacrjournals.org/content/80/16_Supplement/3382.short)

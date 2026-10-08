@@ -1,9 +1,9 @@
 ---
-title: "MatchMiner-AI takes 2nd place for the 2026 Hearst Health Prize"
+title: "MatchMiner-AI takes second place in the 2026 Hearst Health Prize"
 description: "Recognition for matching patients to trials from the full medical record, with openly shared models."
 date: 2026-06-01  # Month only; exact award date not confirmed
 ---
 
-[MatchMiner-AI](../../matchminer-ai.qmd) took 2nd place for the 2026 Hearst Health Prize, awarded at UCLA Health Data Day.
+[MatchMiner-AI](../../matchminer-ai.qmd) took second place in the 2026 Hearst Health Prize, awarded at UCLA Health Data Day.
 
 The recognition highlights its approach: matching patients to trials from the full medical record, with openly shared models trained on synthetic data.

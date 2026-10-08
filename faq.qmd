@@ -75,7 +75,7 @@ De-identified genomic data and limited clinical data are available through [AACR
 
 [Contact the team](contact.qmd).
 
-### I found a bug or a server problem.
+### I found a bug.
 
 For bugs in the open-source code, open an issue in the relevant [GitHub repository](open-source.qmd#code). For anything else, [contact the team](contact.qmd).
 

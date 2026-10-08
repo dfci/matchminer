@@ -14,6 +14,16 @@ Both tools run inside your institution's network, so patient data stays there. P
 
 MatchMiner Genomics runs entirely inside your institution's network, so patient data stays under your own security and HIPAA controls. The [documentation](https://matchminer.gitbook.io/matchminer/) walks through a demo setup you can run on a laptop, with example CTML and example patient data.
 
+### Try the demo
+
+You need bash, cURL, git, Docker, and docker-compose. This command downloads and runs the setup script, then serves the demo at `http://localhost:1952`:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://matchminer.org/setup.sh)"
+```
+
+You can [read the script](setup.sh) before running it.
+
 ### What you need
 
 ::: {.req-table}
