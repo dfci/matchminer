@@ -24,10 +24,6 @@ MatchMiner started in 2016 as a collaboration between software engineers, data s
     <p class="person-name">Jennifer Altreuter</p>
   </div>
   <div class="person">
-    <div class="avatar" aria-hidden="true">HK<img src="assets/img/team/harry-klein.webp" alt="" loading="lazy" onerror="this.remove()"></div>
-    <p class="person-name">Harry Klein</p>
-  </div>
-  <div class="person">
     <div class="avatar" aria-hidden="true">EM<img src="assets/img/team/emily-mallaber.webp" alt="" loading="lazy" onerror="this.remove()"></div>
     <p class="person-name">Emily Mallaber</p>
   </div>
