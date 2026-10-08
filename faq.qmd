@@ -13,7 +13,7 @@ subtitle: "The MatchMiner tools, what they need, and what Dana-Farber can share.
 
 ### Does MatchMiner-AI send patient data outside my institution?
 
-No. MatchMiner-AI runs locally, inside the health system.
+Not by default. MatchMiner-AI can run its models on your own hardware. It can also connect to a model server you choose, in your network or outside it. The [documentation](https://dfci.github.io/matchminer-ai-inference) says to send clinical notes only to an endpoint approved for patient data at your institution.
 
 ### What data was MatchMiner-AI trained on?
 
@@ -27,7 +27,7 @@ Not yet. The Dashboard is in production at Dana-Farber, and its code is due for 
 
 ### Can I set up MatchMiner Genomics at my institution?
 
-Yes. MatchMiner Genomics is open source, and it is HIPAA compliant when hosted behind an institutional firewall. The [documentation](https://matchminer.gitbook.io/matchminer/) covers deployment and a demo setup. See [Get started](get-started.qmd) for an overview.
+Yes. MatchMiner Genomics is open source and runs entirely inside your institution's network, so patient data stays under your own security and HIPAA controls. The [documentation](https://matchminer.gitbook.io/matchminer/) covers deployment and a demo setup. See [Get started](get-started.qmd) for an overview.
 
 ### What data do I need?
 

@@ -12,7 +12,7 @@ Both tools run inside your institution's network, so patient data stays there. P
 
 ## MatchMiner Genomics {#genomics}
 
-MatchMiner Genomics is HIPAA compliant when hosted behind your institutional firewall. The [documentation](https://matchminer.gitbook.io/matchminer/) walks through a demo setup you can run on a laptop, with example CTML and example patient data.
+MatchMiner Genomics runs entirely inside your institution's network, so patient data stays under your own security and HIPAA controls. The [documentation](https://matchminer.gitbook.io/matchminer/) walks through a demo setup you can run on a laptop, with example CTML and example patient data.
 
 ### What you need
 

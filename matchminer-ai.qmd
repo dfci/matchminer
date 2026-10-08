@@ -15,7 +15,7 @@ The released models fall into four families: TrialSpace (retrieval), TrialChecke
 
 ## Built to be shared
 
-MatchMiner-AI is trained entirely on synthetic medical records, so the model weights, inference code, and training data can all be released publicly. It runs locally, inside the health system, so patient records stay there too.
+MatchMiner-AI is trained entirely on synthetic medical records, so the model weights, inference code, and training data can all be released publicly. It can run entirely on your institution's own hardware, so patient records never have to leave.
 
 - [Inference pipeline](https://github.com/dfci/matchminer-ai-inference) (`pip install matchminer-ai`) and its [documentation](https://dfci.github.io/matchminer-ai-inference)
 - [Training code](https://github.com/dfci/matchminer-ai-training)
@@ -29,11 +29,11 @@ MatchMiner-AI launched for Dana-Farber providers in February 2026. Providers can
 
 It took 2nd place for the 2026 Hearst Health Prize and was selected for the first cohort of Meta's Llama Impact Grants in 2024.
 
-## Tested in randomized trials
+## Randomized studies
 
-In a randomized trial run from 2023 to 2024, AI flagged patients whose cancer was progressing, and their oncologists received emails about genomically matched trials. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment ([JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)).
+In a randomized trial run from 2023 to 2024, AI flagged patients whose cancer was progressing, and their oncologists received emails about trial matches from MatchMiner Genomics. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment ([JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)).
 
-[OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd), which began recruiting in 2026, is designed around that result. When MatchMiner-AI detects progression, the oncologist gets a ranked list of possible trials drawn from the whole record.
+[OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd), which began recruiting in 2026, is the first randomized study of MatchMiner-AI's matching, and is designed around that result. When MatchMiner-AI detects progression, the oncologist gets a ranked list of possible trials drawn from the whole record.
 
 ## Read more
 

@@ -51,7 +51,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
       <tbody>
         <tr><td>24-117</td><td>Open</td><td>3</td></tr>
         <tr><td>25-032</td><td>Open</td><td>1</td></tr>
-        <tr><td>25-210</td><td>Upcoming</td><td>6</td></tr>
+        <tr><td>25-210</td><td>Upcoming</td><td>0</td></tr>
       </tbody>
     </table>
   </div>
@@ -190,9 +190,9 @@ Other centers already build on it. Princess Margaret Cancer Centre (UHN) is deve
 ::: {}
 ## In daily use, tested in trials
 
-MatchMiner has run at Dana-Farber since 2016 and is now built into Epic, where providers use it every day.
+MatchMiner has run at Dana-Farber since 2016. Providers now open it from the patient's record in Epic, Dana-Farber's electronic health record.
 
-We test it the way the trials it serves are tested, with randomized studies, and change the design based on what we learn.
+Dana-Farber also runs randomized studies to learn how best to get matches in front of oncologists, and changes the design based on the results.
 :::
 
 ::: {.evidence-list}
@@ -200,7 +200,7 @@ We test it the way the trials it serves are tested, with randomized studies, and
 ::: {.evidence-item}
 [Randomized trial, 2023–2024]{.evidence-when}
 
-When AI detected that a patient's cancer was progressing, their oncologist got an email about matching trials. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment.
+When AI detected that a patient's cancer was progressing, their oncologist got an email about genomic trial matches from MatchMiner. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment.
 
 [Results in JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)
 :::
@@ -208,7 +208,7 @@ When AI detected that a patient's cancer was progressing, their oncologist got a
 ::: {.evidence-item}
 [Randomized trial, recruiting since 2026]{.evidence-when}
 
-OPTIONS-ACTIVATE sends oncologists a ranked list of trials from MatchMiner-AI when progression is detected, and measures how many new treatments are clinical trials.
+OPTIONS-ACTIVATE sends oncologists a ranked list of trials from MatchMiner-AI when progression is detected, and measures the share of new treatments that are clinical trials.
 
 [About OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd)
 :::
