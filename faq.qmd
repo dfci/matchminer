@@ -35,7 +35,7 @@ The MatchEngine and web interface need structured [patient genomic and clinical 
 
 ### What hardware and software do I need?
 
-A small instance runs on a laptop with 4 CPUs and 4 GB of memory. For comparison, Dana-Farber's deployment (about 60,000 clinical samples, 400 trials, 600 saved filters, and 500 users) uses 45 CPU cores and 128 GB of memory.
+A small instance runs on a laptop with 4 CPUs and 4 GB of memory. For comparison, Dana-Farber's deployment (as of 2026, about 80,000 clinical samples, 700 trials, 600 saved filters, and 500 users) uses 45 CPU cores and 128 GB of memory.
 
 ### What staff do I need?
 

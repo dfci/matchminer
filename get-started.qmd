@@ -3,12 +3,12 @@ title: "Run MatchMiner at your institution"
 subtitle: "MatchMiner Genomics and MatchMiner-AI are free to deploy. Here is what each one needs."
 ---
 
-Both tools run inside your institution's network, so patient data stays there. Pick the one that fits the problem you're solving, or run both.
+MatchMiner's two trial matching tools, MatchMiner Genomics and MatchMiner-AI, both run inside your institution's network, so patient data stays there. You can run one or both, depending on your needs.
 
-- **[MatchMiner Genomics](#genomics)** matches patients to precision medicine trials using their sequencing results.
+- **[MatchMiner Genomics](#genomics)** matches patients whose tumors have been sequenced to precision medicine trials.
 - **[MatchMiner-AI](#matchminer-ai)** matches patients to all open trials using their clinical notes.
 
-[MatchMiner Dashboard](dashboard.qmd) isn't available outside Dana-Farber yet. Its code is due for release in winter 2026–27.
+[MatchMiner Dashboard](dashboard.qmd), our trial management tool, isn't available outside Dana-Farber yet. Its code is due for release in winter 2026–27.
 
 ## MatchMiner Genomics {#genomics}
 
@@ -27,10 +27,10 @@ You can [read the script](setup.sh) before running it.
 ### What you need
 
 ::: {.req-table}
-| | Small instance | Dana-Farber's deployment |
+| | Small instance | Dana-Farber's deployment (2026) |
 |---|---|---|
 | **Compute** | 4 CPUs, 4 GB memory (a laptop) | 45 CPU cores, 128 GB memory |
-| **Scale** | Demo data | ~60,000 clinical samples, ~400 trials, ~600 saved filters, ~500 users |
+| **Scale** | Demo data | ~80,000 clinical samples, ~700 trials, ~600 saved filters, ~500 users |
 :::
 
 #### Data
@@ -82,12 +82,12 @@ pip install matchminer-ai
 ### What you need
 
 - **Python 3.12 or later.**
-- **A GPU** for the embedding and classification steps. They haven't been tested on CPU and may be very slow.
+- **A GPU** for the summarization steps, which run the language model. A GPU is also recommended, but not required, for the embedding and classification steps.
 - **A language model.** The package can run it itself, or connect to a model server you run or choose, through an OpenAI-compatible API.
 - **Trials.** One row per trial, with an ID, title, brief summary, and eligibility criteria. The documentation shows how to build this from ClinicalTrials.gov.
 - **Patient notes.** One row per clinical note, with a patient ID, the note text, and the note date.
 
-The package is still before version 1 and under active development. Its [documentation](https://dfci.github.io/matchminer-ai-inference) covers requirements, GPU recommendations, installation, and a quickstart with an example notebook, and explains how to choose between local and remote model inference. The models and synthetic training data are on [Hugging Face](open-source.qmd#models-and-data), and the [training code](https://github.com/dfci/matchminer-ai-training) is public. The code is released for non-commercial use under CC BY-NC-ND 4.0.
+The package is currently pre-v1 and under active development. Its [documentation](https://dfci.github.io/matchminer-ai-inference) covers requirements, GPU recommendations, installation, and a quickstart with an example notebook, and explains how to choose between local and remote model inference. The models and synthetic training data are on [Hugging Face](open-source.qmd#models-and-data), and the [training code](https://github.com/dfci/matchminer-ai-training) is public. The code is released for non-commercial use under CC BY-NC-ND 4.0.
 
 ## Where to go next
 
