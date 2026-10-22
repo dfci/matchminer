@@ -3,7 +3,11 @@ title: "MatchMiner Genomics"
 subtitle: "Match patients to precision medicine trials using their tumor sequencing results. In clinical use at Dana-Farber since 2016."
 ---
 
-Precision medicine trials need patients with specific genomic alterations, and those patients are hard to find by hand. MatchMiner Genomics curates each trial's eligibility into a structured format, Clinical Trial Markup Language (CTML), and the MatchEngine, its matching engine, checks every patient's clinical sequencing results against it. It works both ways: trials for a patient, and patients for a trial.
+Clinical trials with genomic eligibility criteria are increasingly common, and those criteria can be very complex. At the same time, the number of patients whose tumors have been sequenced continues to grow. Together, these trends make it difficult for clinicians to manually match patients to the right trials.
+
+MatchMiner Genomics matches patients to trials with a custom matching process, the MatchEngine, which integrates clinical trial eligibility structured into Clinical Trial Markup Language (CTML) with genomic sequencing of patients' tumors.
+
+It supports both sides of the patient-trial matching process: identify candidate trials for a specific patient, or identify candidate patients for a specific trial.
 
 ::: {.demo-panel .column-body-outset}
 ```{=html}
@@ -44,7 +48,7 @@ Precision medicine trials need patients with specific genomic alterations, and t
 
 ## How it works
 
-MatchMiner Genomics has three open-source parts: the MatchEngine, an API, and a web interface. You supply patient data and trial criteria written in CTML.
+MatchMiner Genomics has three open-source parts: the MatchEngine, an API, and a web interface. You supply patient data and trial criteria written in CTML. Matches are candidates for the patient's care team to review, not a guarantee of eligibility. The care team and trial staff confirm eligibility against the full protocol.
 
 ::: {.steps .column-page}
 
@@ -89,7 +93,7 @@ Clinicians and trial staff browse, filter, and act on matches in the web interfa
 ::: {.mode}
 ### Start from a patient
 
-A provider or research coordinator opens one patient and sees every trial their genomic and clinical profile matches.
+A patient's clinical care team opens MatchMiner Genomics and sees a list of trials matching the genomic profile of that patient's tumor.
 :::
 
 ::: {.mode}
