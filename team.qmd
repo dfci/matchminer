@@ -12,6 +12,10 @@ MatchMiner started in 2016 as a collaboration between software engineers, data s
     <p class="person-name">Michael Hassett</p>
   </div>
   <div class="person">
+    <div class="avatar" aria-hidden="true">KK<img src="assets/img/team/ken-kehl.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Ken Kehl</p>
+  </div>
+  <div class="person">
     <div class="avatar" aria-hidden="true">JL<img src="assets/img/team/james-lindsay.webp" alt="" loading="lazy" onerror="this.remove()"></div>
     <p class="person-name">James Lindsay</p>
   </div>
@@ -46,6 +50,10 @@ MatchMiner started in 2016 as a collaboration between software engineers, data s
   <div class="person">
     <div class="avatar" aria-hidden="true">JH<img src="assets/img/team/jason-hansel.webp" alt="" loading="lazy" onerror="this.remove()"></div>
     <p class="person-name">Jason Hansel</p>
+  </div>
+  <div class="person">
+    <div class="avatar" aria-hidden="true">SC<img src="assets/img/team/sabrina-camp.webp" alt="" loading="lazy" onerror="this.remove()"></div>
+    <p class="person-name">Sabrina Camp</p>
   </div>
 </div>
 ```
