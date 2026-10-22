@@ -29,6 +29,8 @@ MatchMiner-AI's models and training data are on Hugging Face under [`ksg-dfci`](
 
 **Model families**
 
+MatchMiner-AI also uses an open-source large language model, run with the prompts and parameters in the [inference pipeline](https://github.com/dfci/matchminer-ai-inference). The models the team trained fall into three families:
+
 - **TrialSpace** finds candidate trials for a patient, for example [TrialSpace-0526](https://huggingface.co/ksg-dfci/TrialSpace-0526)
 - **TrialChecker** judges whether the patient meets a trial's eligibility criteria, for example [TrialChecker-0526](https://huggingface.co/ksg-dfci/TrialChecker-0526)
 - **BoilerplateChecker** checks the common exclusion criteria most trials share, for example [BoilerplateChecker-0526](https://huggingface.co/ksg-dfci/BoilerplateChecker-0526)

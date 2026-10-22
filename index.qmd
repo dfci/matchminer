@@ -131,7 +131,7 @@ Language models read a patient's clinical notes and match them against all open 
 
 One view for trial management: open slots, enrollment, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
 
-[In production at Dana-Farber across several disease-specific trial teams.]{.pillar-status}
+[In production at Dana-Farber across several trial teams.]{.pillar-status}
 
 [About MatchMiner Dashboard](dashboard.qmd)
 :::

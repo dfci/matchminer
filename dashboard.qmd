@@ -1,6 +1,6 @@
 ---
 title: "MatchMiner Dashboard"
-subtitle: "One view of a disease-specific trial team's portfolio: open and upcoming trials, slot availability, and accrual."
+subtitle: "One view of a trial management team's portfolio: open and upcoming trials, slot availability, and accrual."
 ---
 
 Trial teams piece together which trials are open, how many slots remain, and how accrual is going from several systems and a lot of email. MatchMiner Dashboard puts that in one place.
@@ -9,7 +9,7 @@ Trial teams piece together which trials are open, how many slots remain, and how
 
 ## What it does
 
-MatchMiner Dashboard gives each disease-specific trial team, such as the lung cancer team, a single view of its trials:
+MatchMiner Dashboard gives trial management teams a single view of their trials:
 
 - open and upcoming trials
 - slot availability (places open for new patients)
@@ -21,6 +21,6 @@ MatchMiner Dashboard doesn't use AI or match patients. It's a tool for the peopl
 
 ## Status
 
-MatchMiner Dashboard is in production at Dana-Farber across several disease-specific trial teams.
+MatchMiner Dashboard is in production at Dana-Farber across several trial teams.
 
 Its code isn't public yet. We plan to release it as open source in winter 2026–27. [Contact the team](contact.qmd) if you'd like to hear when it's available.
