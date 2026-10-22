@@ -46,7 +46,7 @@ We suggest at least two scientists to curate and review CTML documents, and at l
 
 ### Writing trials in CTML
 
-CTML is plain YAML (or JSON), so you can write it in any text editor. Here is one arm of a trial that enrolls adults with EGFR L858R-mutant non-small cell lung cancer:
+CTML is plain YAML (or JSON), so you can write it in any text editor. Here is one arm of a trial that enrolls adults whose non-small cell lung cancer has an EGFR L858R mutation:
 
 ```yaml
 protocol_no: 24-117
@@ -67,9 +67,9 @@ treatment_list:
                     age_numerical: ">=18"
 ```
 
-Criteria can combine genomic, clinical, and demographic conditions with `and` / `or`, and CTML can be extended with new criteria. Prefix a value with `!` to exclude it: `variant_category: "!Mutation"` on a second genomic block, for example, keeps out patients who carry a specific variant. Diagnoses follow [OncoTree](https://oncotree.mskcc.org/), so a criterion for non-small cell lung cancer also matches patients with more specific diagnoses underneath it, such as lung adenocarcinoma.
+Criteria can combine genomic, clinical, and demographic conditions with `and` / `or`, and CTML can be extended with new criteria. Prefix a value with `!` to exclude it: `variant_category: "!Mutation"` on a second genomic block, for example, keeps out patients whose tumors have a specific variant. Diagnoses follow [OncoTree](https://oncotree.mskcc.org/), so a criterion for non-small cell lung cancer also matches patients with more specific diagnoses underneath it, such as lung adenocarcinoma.
 
-If you'd rather not edit YAML by hand, the CTIMS project at Princess Margaret built an [editor for writing CTML](https://www.ctims.ca).
+If you'd rather not edit YAML by hand, the CTIMS project at Princess Margaret Cancer Centre built an [editor for writing CTML](https://www.ctims.ca).
 
 ## MatchMiner-AI {#matchminer-ai}
 
