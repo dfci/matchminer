@@ -200,7 +200,7 @@ Dana-Farber also runs randomized studies to learn how best to get matches in fro
 ::: {.evidence-item}
 [Randomized trial, 2023–2024]{.evidence-when}
 
-When AI detected that a patient's cancer was progressing, their oncologist got an email about genomic trial matches from MatchMiner. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment.
+When AI detected that a patient's cancer was progressing, their oncologist got an email about trial matches from MatchMiner Genomics. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment.
 
 [Results in JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)
 :::
