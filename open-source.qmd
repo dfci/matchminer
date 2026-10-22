@@ -21,7 +21,7 @@ All published MatchMiner code lives in the [`dfci`](https://github.com/dfci) Git
 
 <!-- TODO: matchminer-api declares no license on GitHub (checked 2026-09-24). Add one there, then update this row. -->
 
-The [matchminer](https://github.com/dfci/matchminer) repository is the starting point for a Genomics deployment. MatchMiner Dashboard's code will be released in winter 2026–27.
+The [matchminer](https://github.com/dfci/matchminer) repository is the starting point for a MatchMiner Genomics deployment. MatchMiner Dashboard's code will be released in winter 2026–27.
 
 ## Models and data {#models-and-data}
 

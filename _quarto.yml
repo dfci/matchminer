@@ -25,11 +25,11 @@ website:
     left:
       - text: "Tools"
         menu:
-          - text: "Genomics"
+          - text: "MatchMiner Genomics"
             href: genomics.qmd
           - text: "MatchMiner-AI"
             href: matchminer-ai.qmd
-          - text: "Dashboard"
+          - text: "MatchMiner Dashboard"
             href: dashboard.qmd
       - text: "Get started"
         href: get-started.qmd

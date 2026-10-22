@@ -9,7 +9,7 @@ subtitle: "The MatchMiner tools, what they need, and what Dana-Farber can share.
 
 ### What's the difference between MatchMiner Genomics and MatchMiner-AI?
 
-[Genomics](genomics.qmd) matches patients to precision medicine trials using structured sequencing results and trial criteria that curators write in CTML. [MatchMiner-AI](matchminer-ai.qmd) uses language models to read clinical notes and match patients against all open trials, including ones with no genomic criteria. Dana-Farber runs both.
+[MatchMiner Genomics](genomics.qmd) matches patients to precision medicine trials using structured sequencing results and trial criteria that curators write in CTML. [MatchMiner-AI](matchminer-ai.qmd) uses language models to read clinical notes and match patients against all open trials, including ones with no genomic criteria. Dana-Farber runs both.
 
 ### Does MatchMiner-AI send patient data outside my institution?
 
@@ -21,7 +21,7 @@ Synthetic medical records only. That's why the model weights and training data c
 
 ### Can I use MatchMiner Dashboard?
 
-Not yet. The Dashboard is in production at Dana-Farber, and its code is due for release as open source in winter 2026–27.
+Not yet. MatchMiner Dashboard is in production at Dana-Farber, and its code is due for release as open source in winter 2026–27.
 
 ## Setting up MatchMiner Genomics
 
@@ -53,7 +53,7 @@ Documentation, including example CTML and example patient data, is on [GitBook](
 
 ### Who uses MatchMiner?
 
-Clinicians, clinical research staff, and trial investigators use MatchMiner to find trial matches. Trial teams use the Dashboard to track their trial portfolios.
+Clinicians, clinical research staff, and trial investigators use MatchMiner to find trial matches. Trial teams use MatchMiner Dashboard to track their trial portfolios.
 
 ### What has MatchMiner Genomics' impact been at Dana-Farber?
 

@@ -32,7 +32,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
 ```{=html}
 <figure class="suite-demo" aria-labelledby="suite-demo-caption">
   <div class="sd-card sd-genomics" style="--i:0">
-    <p class="sd-tool">Genomics</p>
+    <p class="sd-tool">MatchMiner Genomics</p>
     <p class="sd-line"><span class="chip chip-hit">EGFR p.L858R</span> Lung adenocarcinoma</p>
     <p class="sd-result"><span class="dot" aria-hidden="true"></span>Matches 24-117, arm A</p>
   </div>
@@ -45,7 +45,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
     </ol>
   </div>
   <div class="sd-card sd-dash" style="--i:2">
-    <p class="sd-tool">Dashboard</p>
+    <p class="sd-tool">MatchMiner Dashboard</p>
     <table class="sd-trials" data-quarto-disable-processing="true">
       <thead><tr><th scope="col">Trial</th><th scope="col">Status</th><th scope="col">Open slots</th></tr></thead>
       <tbody>
@@ -55,7 +55,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
       </tbody>
     </table>
   </div>
-  <figcaption id="suite-demo-caption">Synthetic example; trial numbers are made up. Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, an EGFR-targeted drug, and Dashboard shows which trials have open slots.</figcaption>
+  <figcaption id="suite-demo-caption">Synthetic example; trial numbers are made up. MatchMiner Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, an EGFR-targeted drug, and MatchMiner Dashboard shows which trials have open slots.</figcaption>
 </figure>
 ```
 
@@ -105,7 +105,7 @@ Each trial's eligibility is written in a structured format, and a matching engin
 
 [In clinical use at Dana-Farber since 2016.]{.pillar-status}
 
-[About Genomics](genomics.qmd)
+[About MatchMiner Genomics](genomics.qmd)
 :::
 
 ::: {.pillar}
@@ -133,7 +133,7 @@ One view of the trials a disease-specific trial team runs: open slots, enrollmen
 
 [In production at Dana-Farber across several disease-specific trial teams.]{.pillar-status}
 
-[About Dashboard](dashboard.qmd)
+[About MatchMiner Dashboard](dashboard.qmd)
 :::
 
 :::
@@ -156,7 +156,7 @@ One view of the trials a disease-specific trial team runs: open slots, enrollmen
 ::: {}
 ## Open code, open models
 
-The matching engine, the web application, and MatchMiner-AI's model weights, inference code, and synthetic training data are all public. Any cancer center can run them inside its own network and see exactly how a match was made. The Dashboard code is due for release in winter 2026–27.
+The matching engine, the web application, and MatchMiner-AI's model weights, inference code, and synthetic training data are all public. Any cancer center can run them inside its own network and see exactly how a match was made. The MatchMiner Dashboard code is due for release in winter 2026–27.
 
 Other centers already build on it. Princess Margaret Cancer Centre in Toronto leads CTIMS, an open-source trial matching system that uses the MatchMiner matching engine. [See who uses MatchMiner.](adopters.qmd)
 :::
@@ -177,7 +177,7 @@ Other centers already build on it. Princess Margaret Cancer Centre in Toronto le
 ::: {.open-link}
 [Documentation]{.open-venue}
 
-[Genomics](https://matchminer.gitbook.io/matchminer/) and [MatchMiner-AI](https://dfci.github.io/matchminer-ai-inference)
+[MatchMiner Genomics](https://matchminer.gitbook.io/matchminer/) and [MatchMiner-AI](https://dfci.github.io/matchminer-ai-inference)
 :::
 :::
 
