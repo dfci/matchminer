@@ -13,7 +13,7 @@ subtitle: "The MatchMiner tools, what they need, and what Dana-Farber can share.
 
 ### Does MatchMiner-AI send patient data outside my institution?
 
-Not by default. MatchMiner-AI can run its models on your own hardware. It can also connect to a model server you choose, in your network or outside it. The [documentation](https://dfci.github.io/matchminer-ai-inference) says to send clinical notes only to an endpoint approved for patient data at your institution.
+Not by default. MatchMiner-AI can run its models on your own hardware. It can also connect to a model server you choose, in your network or outside it. Clinical data should only be sent to an endpoint approved for patient data at your institution.
 
 ### What data was MatchMiner-AI trained on?
 
@@ -48,6 +48,12 @@ You can write CTML by hand in a text editor, or use the [CTML editor built by th
 ### Where are the documentation and source code?
 
 Documentation, including example CTML and example patient data, is on [GitBook](https://matchminer.gitbook.io/matchminer/). Source code for the MatchEngine, API, and web interface is on [GitHub](https://github.com/dfci/matchminer).
+
+## Setting up MatchMiner-AI
+
+### How do I set up MatchMiner-AI?
+
+[Get started](get-started.qmd#matchminer-ai) covers what it needs and how to install it.
 
 ## Using MatchMiner
 
