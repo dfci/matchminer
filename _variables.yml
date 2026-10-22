@@ -1,1 +1,4 @@
-contact_email: "matchminer-info@ds.dfci.harvard.edu"
+# The contact address is split so it never appears whole in the page source;
+# contact.qmd assembles it in the browser to cut down on scraped spam.
+contact_user: "matchminer-info"
+contact_domain: "ds.dfci.harvard.edu"

@@ -58,6 +58,26 @@ MatchMiner started in 2016 as a collaboration between software engineers, data s
 </div>
 ```
 
+## Alumni
+
+::: {.alumni}
+- Ethan Cerami
+- Catherine Del Vecchio Fitz
+- Matthew Galvin
+- Rachel B Keller
+- Harry Klein
+- Priti Kumari
+- Eric Marriott
+- Tamba Monrose
+- Andrea Ovalle
+- Ethan Siegel
+- Pavel Trukhanov
+- Bernd Van Der Veen
+- Elizabeth H Williams
+- Joyce Yu
+- Zachary Zweisler
+:::
+
 ## Funding {#funding}
 
 MatchMiner is supported by:
