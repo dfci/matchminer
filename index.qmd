@@ -21,7 +21,7 @@ listing:
 ::: {.hero-copy}
 # Open-source software for clinical trial recruitment
 
-MatchMiner is a suite of tools that helps cancer centers find eligible patients and fill their trials, from the trial office to the medical record. It has been built and used at Dana-Farber Cancer Institute since 2016.
+MatchMiner is a suite of tools that help cancer centers with clinical trial enrollment. It has been built and used at Dana-Farber Cancer Institute since 2016.
 
 ::: {.hero-actions}
 [Explore the tools](#suite){.btn .btn-warning}
@@ -99,9 +99,9 @@ Oncology trials are complex, with multiple arms and narrowly defined eligibility
 
 ### MatchMiner Genomics
 
-[Patients with the specific genomic alterations a trial needs are hard to find by hand.]{.pillar-problem}
+[Matching patients to the specific genomic requirements of precision medicine trials is a complex task.]{.pillar-problem}
 
-Each trial's eligibility is written in a structured format, and a matching engine checks every patient's sequencing results against it. It finds trials for a patient and patients for a trial.
+Trial eligibility is translated into a structured format and entered into a matching engine that compares each trial to patients' tumor sequencing results. It can find trials for a specific patient, or patients for a specific trial.
 
 [In clinical use at Dana-Farber since 2016.]{.pillar-status}
 
@@ -129,7 +129,7 @@ Language models read a patient's clinical notes and match them against all open 
 
 [Trial teams track open trials, slots, and accrual across several systems and a lot of email.]{.pillar-problem}
 
-One view of the trials a disease-specific trial team runs: open slots, enrollment, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
+One view for trial management: open slots, enrollment, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
 
 [In production at Dana-Farber across several disease-specific trial teams.]{.pillar-status}
 
