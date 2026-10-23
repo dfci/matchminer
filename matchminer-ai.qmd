@@ -35,9 +35,9 @@ It took second place in the 2026 Hearst Health Prize and was selected for the fi
 
 ## Randomized studies
 
-In a randomized trial run from 2023 to 2024, AI flagged patients whose cancer was progressing, and their oncologists received emails about trial matches from MatchMiner Genomics. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment ([JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)).
+In a randomized trial run from 2023 to 2024, AI flagged patients whose cancer was progressing, and their oncologists received emails about trial matches from MatchMiner Genomics. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment ([JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)). [Watch Ken Kehl discuss the study](https://www.youtube.com/watch?v=pGCz4cU5S6g&t=160) (JAMA Network, on YouTube).
 
-[OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd), which began recruiting in 2026, is the first randomized study of MatchMiner-AI's matching. When MatchMiner-AI detects progression, the oncologist gets a ranked list of possible trials based on the patient's whole record.
+[OPTIONS-ACTIVATE](news/index.qmd#options-activate), which began recruiting in 2026, is the first randomized study of MatchMiner-AI's matching. When MatchMiner-AI detects progression, the oncologist gets a ranked list of possible trials based on the patient's whole record.
 
 ## Run it at your institution
 

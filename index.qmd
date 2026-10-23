@@ -4,14 +4,11 @@ page-layout: custom
 title-block-banner: false
 listing:
   id: latest-news
-  contents: news/posts
+  contents: news/news.yml
+  template: news/_news-latest.ejs
   sort: "date desc"
   max-items: 3
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [date, title, description]
+  fields: [id, title, date, href, description]
   date-format: "MMMM YYYY"
 ---
 
@@ -210,7 +207,7 @@ When AI detected that a patient's cancer was progressing, their oncologist got a
 
 OPTIONS-ACTIVATE sends oncologists a ranked list of trials from MatchMiner-AI when progression is detected, and measures the share of new treatments that are clinical trials.
 
-[About OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd)
+[About OPTIONS-ACTIVATE](news/index.qmd#options-activate)
 :::
 
 :::

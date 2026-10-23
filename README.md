@@ -40,7 +40,7 @@ The site is currently served at <https://dfci.github.io/matchminer/>. matchminer
 | `.github/workflows/publish.yml` | Builds and deploys the site on every push to `site` |
 | `index.qmd` | Home page (custom full-width layout) |
 | `_brand.yml` | Brand colors, fonts, and logos (Quarto brand.yml) |
-| `news/posts/` | One `.qmd` per news item; the listing updates itself |
+| `news/news.yml` | Every news item; the News page and the home page update themselves |
 | `archive/` | Graphics saved from the WordPress site; not published |
 | `PLANNING.md` | Open items and decisions (local only, gitignored) |
 

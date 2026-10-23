@@ -1,0 +1,11 @@
+<div class="news-list">
+<% for (const item of items) { %>
+<article class="news-item">
+<p class="news-date"><%= item.date %></p>
+<div class="news-main">
+<h3 class="news-title"><a href="<%- item.href ? item.href : '/news/#' + item.id %>"><%= item.title %></a></h3>
+<p class="news-summary"><%= item.description %></p>
+</div>
+</article>
+<% } %>
+</div>

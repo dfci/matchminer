@@ -2,12 +2,9 @@
 title: "News"
 subtitle: "Papers, grants, and project updates from the MatchMiner team."
 listing:
-  contents: posts
+  contents: news.yml
+  template: _news-full.ejs
   sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [date, title, description]
+  fields: [id, title, date, href, description, body]
   date-format: "MMMM YYYY"
 ---
