@@ -55,4 +55,17 @@ For MatchMiner-AI, see its [documentation](https://dfci.github.io/matchminer-ai-
 
 Questions about deploying MatchMiner or collaborating: see [matchminer.org/contact](https://matchminer.org/contact.html). Bug reports go in the relevant repository's issues.
 
-The source for the website is on the [`site`](https://github.com/dfci/matchminer/tree/site) branch of this repository.
+## Editing the website
+
+The source for [matchminer.org](https://matchminer.org) is on the [`site`](https://github.com/dfci/matchminer/tree/site) branch of this repository, built with [Quarto](https://quarto.org). This `master` branch holds only this README. Every change goes through a pull request into `site`, and merging is what publishes.
+
+1. Branch off `site`: `git checkout -b my-change origin/site`.
+2. Edit the pages (`.qmd` files, `news/news.yml`, `styles/`) and check them locally with `quarto preview`.
+3. Push the branch and open a pull request against `site` (not `master`).
+4. A bot comments a preview link on the pull request within a few minutes. Share it with reviewers.
+5. Merge the pull request. GitHub Actions renders the site and deploys it to matchminer.org in about a minute.
+
+Ground rules:
+
+- This repository is public. Keep internal details (unannounced collaborations, staff notes, real protocol numbers, internal paths) out of every file and commit message.
+- Site conventions and gotchas (page structure, styling, tool order, writing style) are in [`CLAUDE.md`](https://github.com/dfci/matchminer/blob/site/CLAUDE.md) on the `site` branch. Read it before editing. The [`site` README](https://github.com/dfci/matchminer/blob/site/README.md) describes the file layout.
