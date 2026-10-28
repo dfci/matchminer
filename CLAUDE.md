@@ -12,7 +12,7 @@ The usual loop for a feature or fix:
 2. Edit, then render with `HOME=$TMPDIR/qhome quarto render` (see "Build and preview").
 3. Check it in the browser preview at desktop width (1280px), tablet (768px), and the `mobile` preset (375px). Confirm nothing scrolls sideways.
 4. Commit on the branch. Commit when the user asks, or when they've asked for a branch with the work tested locally.
-5. When the user approves, merge into `site` with `git checkout site && git merge --ff-only <branch>`, then push. **Confirm before every push to `site`, because it publishes.**
+5. For review, push the branch and open a pull request against `site`; a bot comments a Cloudflare preview link (see "Publishing"). When the user approves, they merge it on GitHub, or you merge into `site` with `git checkout site && git merge --ff-only <branch>` and push. **Confirm before every push to `site`, because it publishes.**
 6. Watch the deploy, then check the live site (see "Publishing"). Offer to delete the merged branch.
 
 Before every commit, check that `git status` doesn't list `PLANNING.md` or `CLAUDE.local.md`. Both are gitignored, but check anyway.
