@@ -70,13 +70,13 @@ For visual checks, `.claude/launch.json` defines `matchminer-site`, a static ser
 - `styles/theme.scss`: loads Archivo with its width axis (condensed headings use `font-stretch`), restores the Univers/Arial fallback stack, and tweaks components. Its `scss:defaults` block is evaluated *before* the brand layer, so `$brand-*` variables can't be used there (only in `scss:rules`). That's why a few hex values repeat.
 - `styles/site.css`: page layouts and components (bands, hero, steps, pubs, team grid, footer). CSS custom properties `--mm-*` mirror the brand palette. Responsive overrides are collected at the bottom: `max-width: 991px` (hero text and cards stack; the tool columns stack), `max-width: 680px` (phones; the hero cards go to one column), and `prefers-reduced-motion`.
 - `_includes/footer.html`: site footer, injected via `include-after-body`. Raw HTML, so Quarto doesn't resolve its links; write them root-absolute (`/faq.html`) and the post-render script makes them relative.
-- `_variables.yml`: shared values, used via `{{< var name >}}`. Currently `contact_email` (matchminer@dfci.harvard.edu).
+- `_variables.yml`: shared values, used via `{{< var name >}}`. Currently `contact_user` and `contact_domain` (matchminer-info, ds.dfci.harvard.edu). The address is split on purpose: `contact.qmd` assembles it in the browser so it never appears whole in the page source. Don't write it out in full anywhere on the site.
 - `setup.sh`: published at `/setup.sh` (listed in `project.resources`). The `dfci/matchminer` README pipes `matchminer.org/setup.sh` to bash. It's a shim that downloads and runs `dfci/matchminer-setup`'s real `setup.sh`, replacing the old WordPress 301 redirect. Don't delete or move it.
 - `open-source.qmd` shows each repo's license as it stands on GitHub (the user decided to keep the current licenses). Don't change them or add commentary about them.
 - Content follows an internal landing page brief (location in `CLAUDE.local.md`). Read its "Deliberately left out" section before adding content.
 - MatchMiner is presented as a suite of three equal tools, each with its own page: `genomics.qmd` (includes the CTML demo in a `.demo-panel`), `matchminer-ai.qmd`, `dashboard.qmd`. `open-source.qmd` lists repos, licenses, and Hugging Face models and data. The Dashboard isn't open source yet; release is planned for winter 2026–27. `get-started.qmd` covers only the two deployable tools (Genomics, then MatchMiner-AI).
 - Interior pages use the default article layout with a deep-blue title banner. Put the page summary in `subtitle:`; `description:` isn't displayed.
-- `news/posts/*.qmd`: one file per item. `news/index.qmd` lists them automatically, newest first. The home page shows the latest three.
+- `news/news.yml`: every news item (title, date, optional `href` to the primary source, one-line `description`, full `body`). `news/index.qmd` shows them all in full through `news/_news-full.ejs`; the home page shows the latest three through `news/_news-latest.ejs`. Headlines link to `href` when there is one. In `body`, link to site pages with root-absolute paths (`/matchminer-ai.html`) so they work from both pages. Don't indent lines in the `.ejs` templates: Quarto treats their output as Markdown, and indented lines become code blocks.
 - `archive/wordpress/`: graphics from the old site. Not published. See `archive/README.md`.
 
 ### Tool order
@@ -113,7 +113,7 @@ Always list the tools as **Genomics, MatchMiner-AI, Dashboard**. When adding or 
   ```
 
   The columns use CSS subgrid (`grid-row: span 6`), and the `<section>` Pandoc wraps around the heading is set to `display: contents`. That way each row lines up across the columns. Adding or removing a part breaks the alignment unless you change the `6` in `site.css`. Keep the three columns' text about the same length: problem lines about 90 characters, descriptions about 200.
-- **News:** the news section is a Quarto listing with `id: latest-news`, which Quarto renders as `#listing-latest-news` (style that id).
+- **News:** the news section is a Quarto listing (`id: latest-news`) of `news/news.yml` with a custom template; style `.news-item`, shared with the News page.
 - **Sources:** the citation superscripts (`<sup class="cite">`) link to the `.sources` list at the end of the tools section.
 
 ## Gotchas

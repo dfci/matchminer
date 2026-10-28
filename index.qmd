@@ -4,14 +4,11 @@ page-layout: custom
 title-block-banner: false
 listing:
   id: latest-news
-  contents: news/posts
+  contents: news/news.yml
+  template: news/_news-latest.ejs
   sort: "date desc"
   max-items: 3
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [date, title, description]
+  fields: [id, title, date, href, description]
   date-format: "MMMM YYYY"
 ---
 
@@ -21,7 +18,7 @@ listing:
 ::: {.hero-copy}
 # Open-source software for clinical trial recruitment
 
-MatchMiner is a suite of tools that helps cancer centers find eligible patients and fill their trials, from the trial office to the medical record. It has been built and used at Dana-Farber Cancer Institute since 2016.
+MatchMiner is a suite of tools that help cancer centers with clinical trial enrollment. It has been built and used at Dana-Farber Cancer Institute since 2016.
 
 ::: {.hero-actions}
 [Explore the tools](#suite){.btn .btn-warning}
@@ -32,7 +29,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
 ```{=html}
 <figure class="suite-demo" aria-labelledby="suite-demo-caption">
   <div class="sd-card sd-genomics" style="--i:0">
-    <p class="sd-tool">Genomics</p>
+    <p class="sd-tool">MatchMiner Genomics</p>
     <p class="sd-line"><span class="chip chip-hit">EGFR p.L858R</span> Lung adenocarcinoma</p>
     <p class="sd-result"><span class="dot" aria-hidden="true"></span>Matches 24-117, arm A</p>
   </div>
@@ -45,7 +42,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
     </ol>
   </div>
   <div class="sd-card sd-dash" style="--i:2">
-    <p class="sd-tool">Dashboard</p>
+    <p class="sd-tool">MatchMiner Dashboard</p>
     <table class="sd-trials" data-quarto-disable-processing="true">
       <thead><tr><th scope="col">Trial</th><th scope="col">Status</th><th scope="col">Open slots</th></tr></thead>
       <tbody>
@@ -55,7 +52,7 @@ MatchMiner is a suite of tools that helps cancer centers find eligible patients 
       </tbody>
     </table>
   </div>
-  <figcaption id="suite-demo-caption">Synthetic example; trial numbers are made up. Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, an EGFR-targeted drug, and Dashboard shows which trials have open slots.</figcaption>
+  <figcaption id="suite-demo-caption">Synthetic example; trial numbers are made up. MatchMiner Genomics matches the tumor's EGFR variant, MatchMiner-AI reads the notes and sees the patient has already had osimertinib, an EGFR-targeted drug, and MatchMiner Dashboard shows which trials have open slots.</figcaption>
 </figure>
 ```
 
@@ -99,13 +96,13 @@ Oncology trials are complex, with multiple arms and narrowly defined eligibility
 
 ### MatchMiner Genomics
 
-[Patients with the specific genomic alterations a trial needs are hard to find by hand.]{.pillar-problem}
+[Matching patients to the specific genomic requirements of precision medicine trials is a complex task.]{.pillar-problem}
 
-Each trial's eligibility is written in a structured format, and a matching engine checks every patient's sequencing results against it. It finds trials for a patient and patients for a trial.
+Trial eligibility is translated into a structured format and entered into a matching engine that compares each trial to patients' tumor sequencing results. It can find trials for a specific patient, or patients for a specific trial.
 
 [In clinical use at Dana-Farber since 2016.]{.pillar-status}
 
-[About Genomics](genomics.qmd)
+[About MatchMiner Genomics](genomics.qmd)
 :::
 
 ::: {.pillar}
@@ -129,11 +126,11 @@ Language models read a patient's clinical notes and match them against all open 
 
 [Trial teams track open trials, slots, and accrual across several systems and a lot of email.]{.pillar-problem}
 
-One view of the trials a disease-specific trial team runs: open slots, enrollment, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
+One view for trial management: open slots, enrollment, and milestones. Details come from ClinicalTrials.gov and the center's clinical trial management system (CTMS), and teams add eligibility notes.
 
-[In production at Dana-Farber across several disease-specific trial teams.]{.pillar-status}
+[In production at Dana-Farber across several trial teams.]{.pillar-status}
 
-[About Dashboard](dashboard.qmd)
+[About MatchMiner Dashboard](dashboard.qmd)
 :::
 
 :::
@@ -156,7 +153,7 @@ One view of the trials a disease-specific trial team runs: open slots, enrollmen
 ::: {}
 ## Open code, open models
 
-The matching engine, the web application, and MatchMiner-AI's model weights, inference code, and synthetic training data are all public. Any cancer center can run them inside its own network and see exactly how a match was made. The Dashboard code is due for release in winter 2026–27.
+The matching engine, the web application, and MatchMiner-AI's model weights, inference code, and synthetic training data are all public. Any cancer center can run them inside its own network and see exactly how a match was made. The MatchMiner Dashboard code is due for release in winter 2026–27.
 
 Other centers already build on it. Princess Margaret Cancer Centre in Toronto leads CTIMS, an open-source trial matching system that uses the MatchMiner matching engine. [See who uses MatchMiner.](adopters.qmd)
 :::
@@ -177,7 +174,7 @@ Other centers already build on it. Princess Margaret Cancer Centre in Toronto le
 ::: {.open-link}
 [Documentation]{.open-venue}
 
-[Genomics](https://matchminer.gitbook.io/matchminer/) and [MatchMiner-AI](https://dfci.github.io/matchminer-ai-inference)
+[MatchMiner Genomics](https://matchminer.gitbook.io/matchminer/) and [MatchMiner-AI](https://dfci.github.io/matchminer-ai-inference)
 :::
 :::
 
@@ -200,7 +197,7 @@ Dana-Farber also runs randomized studies to learn how best to get matches in fro
 ::: {.evidence-item}
 [Randomized trial, 2023–2024]{.evidence-when}
 
-When AI detected that a patient's cancer was progressing, their oncologist got an email about genomic trial matches from MatchMiner. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment.
+When AI detected that a patient's cancer was progressing, their oncologist got an email about trial matches from MatchMiner Genomics. The AI reliably spotted patients likely to need a new treatment, but the emails alone didn't raise enrollment.
 
 [Results in JAMA Network Open, 2025](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2833029)
 :::
@@ -210,7 +207,7 @@ When AI detected that a patient's cancer was progressing, their oncologist got a
 
 OPTIONS-ACTIVATE sends oncologists a ranked list of trials from MatchMiner-AI when progression is detected, and measures the share of new treatments that are clinical trials.
 
-[About OPTIONS-ACTIVATE](news/posts/2026-options-activate.qmd)
+[About OPTIONS-ACTIVATE](news/index.qmd#options-activate)
 :::
 
 :::

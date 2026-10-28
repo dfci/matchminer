@@ -10,7 +10,16 @@ subtitle: "Questions about deploying MatchMiner, collaborating, or joining the t
 
 For deployment questions, collaborations, and open roles. Tell us your institution and your role (clinician, research coordinator, investigator, engineer) so we can route your question.
 
-[{{< var contact_email >}}](mailto:{{< var contact_email >}})
+```{=html}
+<p><a class="mm-email" data-user="{{< var contact_user >}}" data-domain="{{< var contact_domain >}}">{{< var contact_user >}} at {{< var contact_domain >}}</a></p>
+<script>
+  document.querySelectorAll("a.mm-email").forEach(function (a) {
+    var address = a.dataset.user + "\u0040" + a.dataset.domain;
+    a.href = "mailto:" + address;
+    a.textContent = address;
+  });
+</script>
+```
 :::
 
 ::: {.contact-option}

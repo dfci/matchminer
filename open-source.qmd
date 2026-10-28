@@ -21,13 +21,15 @@ All published MatchMiner code lives in the [`dfci`](https://github.com/dfci) Git
 
 <!-- TODO: matchminer-api declares no license on GitHub (checked 2026-09-24). Add one there, then update this row. -->
 
-The [matchminer](https://github.com/dfci/matchminer) repository is the starting point for a Genomics deployment. MatchMiner Dashboard's code will be released in winter 2026–27.
+The [matchminer](https://github.com/dfci/matchminer) repository is the starting point for a MatchMiner Genomics deployment. MatchMiner Dashboard's code will be released in winter 2026–27.
 
 ## Models and data {#models-and-data}
 
 MatchMiner-AI's models and training data are on Hugging Face under [`ksg-dfci`](https://huggingface.co/ksg-dfci) (Dana-Farber's Knowledge Systems Group). The models are trained entirely on synthetic medical records, which is why they can be shared.
 
 **Model families**
+
+MatchMiner-AI also uses an open-source large language model, run with the prompts and parameters in the [inference pipeline](https://github.com/dfci/matchminer-ai-inference). The models the team trained fall into three families:
 
 - **TrialSpace** finds candidate trials for a patient, for example [TrialSpace-0526](https://huggingface.co/ksg-dfci/TrialSpace-0526)
 - **TrialChecker** judges whether the patient meets a trial's eligibility criteria, for example [TrialChecker-0526](https://huggingface.co/ksg-dfci/TrialChecker-0526)

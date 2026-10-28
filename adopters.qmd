@@ -7,7 +7,7 @@ MatchMiner is open source, so any center can run it or build on it. These are th
 
 ## Dana-Farber Cancer Institute, Boston
 
-Where MatchMiner is built. MatchMiner Genomics has been in clinical use since 2016, MatchMiner-AI launched for providers in February 2026, and the Dashboard is in production across several disease-specific trial teams.
+Where MatchMiner is built. MatchMiner Genomics has been in clinical use since 2016, MatchMiner-AI launched for providers in February 2026, and MatchMiner Dashboard is in production across several trial teams.
 
 ## Princess Margaret Cancer Centre, Toronto
 

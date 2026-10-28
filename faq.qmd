@@ -9,11 +9,11 @@ subtitle: "The MatchMiner tools, what they need, and what Dana-Farber can share.
 
 ### What's the difference between MatchMiner Genomics and MatchMiner-AI?
 
-[Genomics](genomics.qmd) matches patients to precision medicine trials using structured sequencing results and trial criteria that curators write in CTML. [MatchMiner-AI](matchminer-ai.qmd) uses language models to read clinical notes and match patients against all open trials, including ones with no genomic criteria. Dana-Farber runs both.
+[MatchMiner Genomics](genomics.qmd) matches patients to precision medicine trials using structured sequencing results and trial criteria that curators write in CTML. [MatchMiner-AI](matchminer-ai.qmd) uses language models to read clinical notes and match patients against all open trials, including ones with no genomic criteria. Dana-Farber runs both.
 
 ### Does MatchMiner-AI send patient data outside my institution?
 
-Not by default. MatchMiner-AI can run its models on your own hardware. It can also connect to a model server you choose, in your network or outside it. The [documentation](https://dfci.github.io/matchminer-ai-inference) says to send clinical notes only to an endpoint approved for patient data at your institution.
+Not by default. MatchMiner-AI can run its models on your own hardware. It can also connect to a model server you choose, in your network or outside it. Clinical data should only be sent to an endpoint approved for patient data at your institution.
 
 ### What data was MatchMiner-AI trained on?
 
@@ -21,7 +21,7 @@ Synthetic medical records only. That's why the model weights and training data c
 
 ### Can I use MatchMiner Dashboard?
 
-Not yet. The Dashboard is in production at Dana-Farber, and its code is due for release as open source in winter 2026–27.
+Not yet. MatchMiner Dashboard is in production at Dana-Farber, and its code is due for release as open source in winter 2026–27.
 
 ## Setting up MatchMiner Genomics
 
@@ -35,7 +35,7 @@ The MatchEngine and web interface need structured [patient genomic and clinical 
 
 ### What hardware and software do I need?
 
-A small instance runs on a laptop with 4 CPUs and 4 GB of memory. For comparison, Dana-Farber's deployment (about 60,000 clinical samples, 400 trials, 600 saved filters, and 500 users) uses 45 CPU cores and 128 GB of memory.
+A small instance runs on a laptop with 4 CPUs and 4 GB of memory. For comparison, Dana-Farber's deployment (as of 2026, about 80,000 clinical samples, 700 trials, 600 saved filters, and 500 users) uses 45 CPU cores and 128 GB of memory.
 
 ### What staff do I need?
 
@@ -43,17 +43,23 @@ We suggest at least two scientists to curate and review CTML documents, and at l
 
 ### How do I write trial eligibility in CTML?
 
-You can write CTML by hand in a text editor, or use the [CTML editor built by the CTIMS project](https://www.ctims.ca) at Princess Margaret.
+You can write CTML by hand in a text editor, or use the [CTML editor built by the CTIMS project](https://www.ctims.ca) at Princess Margaret Cancer Centre.
 
 ### Where are the documentation and source code?
 
 Documentation, including example CTML and example patient data, is on [GitBook](https://matchminer.gitbook.io/matchminer/). Source code for the MatchEngine, API, and web interface is on [GitHub](https://github.com/dfci/matchminer).
 
+## Setting up MatchMiner-AI
+
+### How do I set up MatchMiner-AI?
+
+[Get started](get-started.qmd#matchminer-ai) covers what it needs and how to install it.
+
 ## Using MatchMiner
 
 ### Who uses MatchMiner?
 
-Clinicians, clinical research staff, and trial investigators use MatchMiner to find trial matches. Trial teams use the Dashboard to track their trial portfolios.
+Clinicians, clinical research staff, and trial investigators use MatchMiner to find trial matches. Trial teams use MatchMiner Dashboard to track their trial portfolios.
 
 ### What has MatchMiner Genomics' impact been at Dana-Farber?
 
