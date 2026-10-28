@@ -1,38 +1,58 @@
 # MatchMiner
 <img src="mman.png"
-     alt="MatchMiner man"
+     alt=""
      height="100px"
      style="float:right"
 />
 
-Developed at Dana-Farber Cancer Institute (DFCI), MatchMiner is an open source computational platform for matching patient-specific genomic profiles to precision cancer medicine clinical trials.
+MatchMiner is open-source software for clinical trial matching, built and used at Dana-Farber Cancer Institute since 2016. It is a suite of three tools: MatchMiner Genomics, MatchMiner-AI, and MatchMiner Dashboard.
 
-The input to MatchMiner is two fold: patient-specific genomic and clinical data, and structured eligibility criteria for clinical trials. Patient-specific information includes somatic genomic events, including mutations, copy number alterations, and structural variants. Basic clinical data such as cancer type, age, and sex extracted from the Electronic Medical Record (EMR) are also utilized.
+**Website: [matchminer.org](https://matchminer.org)**
 
-Structured clinical trial eligibility criteria are specified in the Clinical Trial Markup Language (CTML), and allows the specification of genomic and basic clinical criteria described in clinical trial protocol documents.
+## MatchMiner Genomics
 
-The MatchMiner platform matches patient-specific genomic events to clinical trials, and makes the results available to trial investigators and clinicians via a web-based platform.
+Matches patients whose tumors have been sequenced to precision medicine trials. Each trial's eligibility is written in Clinical Trial Markup Language (CTML), and the MatchEngine checks every patient's genomic and clinical data against it. It finds trials for a specific patient, or patients for a specific trial.
 
 <img src="mm_fig.png"
-     alt="MatchMiner modes"
+     alt="Genomic profiles and structured trial eligibility criteria, plus optional trial status and medical record data, feed into MatchMiner. In clinical trial investigator mode, a trial is matched to patients; in oncologist mode, a patient is matched to trials."
      height="300px"
      align="center"
 />
 
-# Getting Started
+- Code: [matchengine-V2](https://github.com/dfci/matchengine-V2) (matching engine), [matchminer-api](https://github.com/dfci/matchminer-api) (stores patient data and match results), [matchminer-ui](https://github.com/dfci/matchminer-ui) (web interface)
+- [Documentation](https://matchminer.gitbook.io/matchminer/)
 
-To get started with MatchMiner, just run the following command on macOS or Linux:
+## MatchMiner-AI
+
+Uses language models to read a patient's clinical notes and suggest trials for the oncologist to review, including trials with no genomic criteria. The models are trained entirely on synthetic medical records, so the weights and training data are public.
+
+- Code: [matchminer-ai-inference](https://github.com/dfci/matchminer-ai-inference) (`pip install matchminer-ai`) and [matchminer-ai-training](https://github.com/dfci/matchminer-ai-training)
+- Models and synthetic data: [Hugging Face](https://huggingface.co/ksg-dfci)
+- [Documentation](https://dfci.github.io/matchminer-ai-inference)
+
+## MatchMiner Dashboard
+
+One view for trial management: open slots, enrollment, and milestones. It is in production at Dana-Farber; its code is due for release in winter 2026–27.
+
+## Getting started
+
+To try a MatchMiner Genomics demo on macOS or Linux, run:
 
 ```
  /bin/bash -c "$(curl -fsSL https://matchminer.org/setup.sh)"
 ```
 
-This requires bash, cURL, git, docker, and docker-compose.
+This requires bash, cURL, git, docker, and docker-compose. The demo runs at http://localhost:1952.
 
+For MatchMiner-AI, see its [documentation](https://dfci.github.io/matchminer-ai-inference). The website's [Get started](https://matchminer.org/get-started.html) page covers what each tool needs.
 
-# Documentation
-Documentation for the project can be found here - [Documentation](https://matchminer.gitbook.io/matchminer/)
+## Citing MatchMiner
 
+- MatchMiner Genomics: Klein H. et al., [MatchMiner: an open-source platform for cancer precision medicine](https://doi.org/10.1038/s41698-022-00312-5), *npj Precision Oncology* 2022;6:69.
+- MatchMiner-AI: Altreuter J. et al., [MatchMiner-AI: An Open-Source Solution for Cancer Clinical Trial Matching](https://arxiv.org/abs/2412.17228), arXiv:2412.17228 (2024).
 
-# Code 
-[matchminer-engine-v2](https://github.com/dfci/matchengine-V2) - the core part matching cancer patients to genomically driven clinical trials using Clinical Trial Markup Language (CTML) and patient clinical and genomic data. It utilizes the [matchminer-api](https://github.com/dfci/matchminer-api)  to store source data and matching results and [matchminer-ui](https://github.com/dfci/matchminer-ui) for displaying trial matches and other patient information.
+## Contact
+
+Questions about deploying MatchMiner or collaborating: see [matchminer.org/contact](https://matchminer.org/contact.html). Bug reports go in the relevant repository's issues.
+
+The source for the website is on the [`site`](https://github.com/dfci/matchminer/tree/site) branch of this repository.
