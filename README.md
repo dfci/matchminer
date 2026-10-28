@@ -15,7 +15,7 @@ Team headshots are committed in `assets/img/team/` as 480px WebP. To add someone
 
 ## Publishing
 
-This source lives on the `site` branch of [dfci/matchminer](https://github.com/dfci/matchminer). The repo's `master` branch is separate. Every push to `site` runs `.github/workflows/publish.yml`, which renders the site and deploys it to GitHub Pages in about a minute. After rendering, `scripts/relativize-links.ts` rewrites root-absolute links to relative ones, so the site works both at the root of matchminer.org and under the `dfci.github.io/matchminer/` subpath.
+This source lives on the `site` branch of [dfci/matchminer](https://github.com/dfci/matchminer). The repo's `master` branch is separate. Every push to `site` runs `.github/workflows/publish.yml`, which renders the site and deploys it to GitHub Pages in about a minute. After rendering, `scripts/relativize-links.ts` rewrites root-absolute links to relative ones, so the site works at the root of matchminer.org, under a subpath, or opened locally.
 
 To make a change, branch off `site`, check it locally, then merge back:
 
@@ -25,7 +25,7 @@ git checkout -b my-change site
 git checkout site && git merge --ff-only my-change && git push
 ```
 
-The site is currently served at <https://dfci.github.io/matchminer/>. matchminer.org still points at the old WordPress site. To switch, point the domain's DNS at GitHub Pages, then set `matchminer.org` as the custom domain in the repo's Pages settings. Don't set the custom domain before the DNS change, or the preview will redirect to the old site.
+The site is served at <https://matchminer.org>. The domain's DNS points at GitHub Pages, and `matchminer.org` is set as the custom domain in the repo's Pages settings, with HTTPS enforced. The old address, <https://dfci.github.io/matchminer/>, redirects there.
 
 ## Layout
 

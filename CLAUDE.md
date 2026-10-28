@@ -2,7 +2,7 @@
 
 Quarto website for matchminer.org, replacing the old WordPress site. MatchMiner is an open-source clinical trial matching platform from the Knowledge Systems Group at Dana-Farber Cancer Institute (DFCI).
 
-The site is live as a preview at https://dfci.github.io/matchminer/. It's published to GitHub Pages from the `site` branch of the public repo `dfci/matchminer`. The repo's `master` branch (the old MatchMiner README) is separate: never touch it. After the DNS cutover the site will be served at matchminer.org (see "Publishing").
+The site is live at https://matchminer.org (since 2026-10-28; the old address https://dfci.github.io/matchminer/ redirects there). It's published to GitHub Pages from the `site` branch of the public repo `dfci/matchminer`. The repo's `master` branch (the old MatchMiner README) is separate: never touch it.
 
 ## Making a change
 
@@ -53,15 +53,10 @@ For visual checks, `.claude/launch.json` defines `matchminer-site`, a static ser
 
 - **Workflow:** `.github/workflows/publish.yml` runs on every push to `site`. It renders the site and deploys it with `actions/upload-pages-artifact` and `actions/deploy-pages`, and takes about a minute.
 - **Watching a deploy:** the run takes 10–20 seconds to appear after a push, and `gh run list` can return nothing or a 404 until then. Poll for a run whose `headSha` matches the pushed commit, then use `gh run watch <id> -R dfci/matchminer --exit-status`.
-- **Checking the live site:** the sandbox blocks `curl` to `dfci.github.io`, so use WebFetch. WebFetch caches pages for 15 minutes, so add a cache-busting query (`?v=<sha>`) after a deploy.
-- **Repo settings (already done):** Pages builds from GitHub Actions. The `github-pages` environment allows the `master` and `site` branches to deploy. No custom domain is set yet.
-- **Subpath links:** until the DNS cutover the site is served from a subpath (`/matchminer/`). The post-render script `scripts/relativize-links.ts` rewrites every root-absolute `href`/`src` in `_site` (such as `/faq.html` in the footer) to a relative path. It runs on the Deno bundled with Quarto. Don't use root-absolute URLs in CSS, which the script doesn't touch.
-- **DNS cutover (not done yet; the user decides when):**
-  1. Point matchminer.org's A records at GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153). For `www`, add a CNAME record pointing to `dfci.github.io`.
-  2. Then set the custom domain with `gh api -X PUT repos/dfci/matchminer/pages -f cname=matchminer.org`, and turn on HTTPS once the certificate is issued.
-  3. Test `curl -fsSL https://matchminer.org/setup.sh`.
-
-  Setting the custom domain earlier would redirect the github.io preview to the old WordPress site. With Actions deploys, the `CNAME` file in the repo is ignored; the Pages setting is what counts.
+- **Checking the live site:** the sandbox blocks `curl` to `matchminer.org` and `dfci.github.io`, so use WebFetch. WebFetch caches pages for 15 minutes, so add a cache-busting query (`?v=<sha>`) after a deploy.
+- **Repo settings (already done):** Pages builds from GitHub Actions. The `github-pages` environment allows the `master` and `site` branches to deploy. The custom domain is `matchminer.org`. With Actions deploys, the `CNAME` file in the repo is ignored; the Pages setting is what counts.
+- **Relative links:** the post-render script `scripts/relativize-links.ts` rewrites every root-absolute `href`/`src` in `_site` (such as `/faq.html` in the footer) to a relative path. It was needed while the site lived under `/matchminer/`; it's harmless now, and keeps local previews and any future subpath working. It runs on the Deno bundled with Quarto. Don't use root-absolute URLs in CSS, which the script doesn't touch.
+- **Domain:** matchminer.org is set as the custom domain in the repo's Pages settings, with HTTPS enforced. DNS details are in `PLANNING.md` (local only).
 - **Workflow warnings:** runs warn that the actions target the retiring Node.js 20 runtime, and that `ubuntu-latest` moves to Ubuntu 26 from October 19, 2026. Neither affects the build. Bump the action versions when newer majors are out.
 
 ## How the site is put together
