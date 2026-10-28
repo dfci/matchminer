@@ -1,0 +1,68 @@
+name: Preview pull request
+
+# Builds each pull request into site and uploads it to Cloudflare Pages
+# (project "matchminer-preview"), then comments the preview link on the PR.
+# The live site is unaffected: it only deploys from publish.yml on pushes to site.
+# Needs the CLOUDFLARE_API_TOKEN (Cloudflare Pages: Edit) and
+# CLOUDFLARE_ACCOUNT_ID repo secrets. Pull requests from forks don't get
+# secrets, so they skip the upload.
+
+on:
+  pull_request:
+    branches: [site]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: preview-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  PROJECT: matchminer-preview
+
+jobs:
+  preview:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.9.36
+      - run: quarto render
+
+      # Keep previews out of search engines (Cloudflare Pages reads _headers).
+      - run: |
+          printf '/*\n  X-Robots-Tag: noindex\n' > _site/_headers
+
+      - name: Create the Pages project if it doesn't exist yet
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create ${{ env.PROJECT }} --production-branch=site
+        continue-on-error: true
+
+      - name: Upload to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _site --project-name=${{ env.PROJECT }} --branch=pr-${{ github.event.pull_request.number }} --commit-dirty=true
+
+      - name: Comment the preview link
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          URL: ${{ steps.deploy.outputs.deployment-url }}
+          ALIAS: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          body="Preview of this pull request: ${ALIAS:-$URL}
+
+          Updated for commit ${SHA::7}. Previews are public but hidden from search engines."
+          gh pr comment "$PR" -R "$GITHUB_REPOSITORY" --edit-last --body "$body" 2>/dev/null \
+            || gh pr comment "$PR" -R "$GITHUB_REPOSITORY" --body "$body"

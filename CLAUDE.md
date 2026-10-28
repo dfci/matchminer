@@ -52,6 +52,7 @@ For visual checks, `.claude/launch.json` defines `matchminer-site`, a static ser
 ## Publishing
 
 - **Workflow:** `.github/workflows/publish.yml` runs on every push to `site`. It renders the site and deploys it with `actions/upload-pages-artifact` and `actions/deploy-pages`, and takes about a minute.
+- **Pull request previews:** `.github/workflows/preview.yml` builds every pull request into `site` and uploads it to Cloudflare Pages; a bot comments the preview link on the PR. Previews are public but hidden from search engines. It uses the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repo secrets.
 - **Watching a deploy:** the run takes 10–20 seconds to appear after a push, and `gh run list` can return nothing or a 404 until then. Poll for a run whose `headSha` matches the pushed commit, then use `gh run watch <id> -R dfci/matchminer --exit-status`.
 - **Checking the live site:** the sandbox blocks `curl` to `matchminer.org` and `dfci.github.io`, so use WebFetch. WebFetch caches pages for 15 minutes, so add a cache-busting query (`?v=<sha>`) after a deploy.
 - **Repo settings (already done):** Pages builds from GitHub Actions. The `github-pages` environment allows the `master` and `site` branches to deploy. The custom domain is `matchminer.org`. With Actions deploys, the `CNAME` file in the repo is ignored; the Pages setting is what counts.
